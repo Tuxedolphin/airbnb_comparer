@@ -75,15 +75,35 @@ def listing_adder(
     add_listing_sql(id, timedelta)
 
 
-def add_listing_sql(id, timedelta):
+def add_listing_sql(id: int, timedelta):
     """
     To store into sqlite database
     """
+    
+    # Load json file for processing
     with open("result.json", "r") as file:
         data = json.load(file)
     
+    # Extracting important information from json file
     
+    # Basic information
+    coordinates = data["coordinates"]
+    super_host = data["is_super_host"]
+    capacity = data["person_capacity"]
+    
+    # Average rating
+    rating = (sum(float(value) for key, value in data["rating"].items()) - float(data["rating"]["review_count"])) / (len(data["rating"]) - 1)
+    
+    # Check in and out
+    check_in_out = tuple(item["title"] for item in data["house_rules"]["general"][0]["values"])
+    
+    # Gets layout
+    layout = tuple(data["sub_description"]["items"])
 
+    # Gets amenities
+    # TODO: DICT COMPREHENSION
+    amenities = {data["amenities"]}
+    print(amenities)
 
 if __name__ == "__main__":
     main()
