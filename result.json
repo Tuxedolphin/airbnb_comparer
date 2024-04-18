@@ -1,0 +1,928 @@
+{
+    "coordinates": {
+        "latitude": 35.03094,
+        "longitude": 139.08269
+    },
+    "room_type": "Entire home/apt",
+    "is_super_host": true,
+    "home_tier": 1,
+    "person_capacity": 6,
+    "rating": {
+        "accuracy": 4.95,
+        "checking": 4.96,
+        "cleanliness": 4.96,
+        "communication": 4.97,
+        "location": 4.84,
+        "value": 4.89,
+        "guest_satisfaction": 4.96,
+        "review_count": "269"
+    },
+    "house_rules": {
+        "aditional": "- If the room was left too much untidy, there is a possibility that I will charge you a penalty depending on extra cleaning fee would cost.\n\n- Smoking is not allowed on this property except for the dec balcony. Please make sure to use the ashtray and be careful with the use of fire.\n\n- Please leave all trash inside the property.\n\n- Please be mindful of your noise levels especially after 7PM. \n\n- Please do not use a balcony after 8PM except for smoking.\n\n- You can only use one set of linens per person. Please ask us if you would like to use more linens.\n\n- No visitors allowed. Only guests with reservations are permitted on the property unless you ask me beforehand.\n\n- Only guests who stay more than 2 nights can have BBQ with a pre-reservation. \nYou will need to pay an extra fee for it and use the equipped stove and gas.\nAnd please have BBQ only on the balcony, not inside the house. \nWe ask you to finish it by 7PM as not to bother neighbors. \nAlso please wash what you used and pack up when it is all done.\n\n- We only allow one small dog with the extra fee and prior notice. \n\n- The room where you can put 3 futon mattresses is the space in-between the bedroom with a queen-sized bed and stairs. If you are worried about the structure of the accommodation, please feel free to send me an inquiry.\n\n- If you don't follow my house rules above, I might be requesting you to pay the extra 30,000 yen per day as a penalty.",
+        "general": [
+            {
+                "title": "Checking in and out",
+                "values": [
+                    {
+                        "title": "Check-in after 4:00 pm",
+                        "icon": "SYSTEM_CLOCK"
+                    },
+                    {
+                        "title": "Checkout before 11:00 am",
+                        "icon": "SYSTEM_CLOCK"
+                    },
+                    {
+                        "title": "Self check-in with lockbox",
+                        "icon": "SYSTEM_CHECK_IN"
+                    }
+                ]
+            },
+            {
+                "title": "During your stay",
+                "values": [
+                    {
+                        "title": "6 guests maximum",
+                        "icon": "SYSTEM_FAMILY"
+                    },
+                    {
+                        "title": "Pets allowed",
+                        "icon": "SYSTEM_PETS"
+                    },
+                    {
+                        "title": "Smoking is allowed",
+                        "icon": "SYSTEM_SMOKING_ALLOWED"
+                    }
+                ]
+            }
+        ]
+    },
+    "host": {
+        "id": "452687911",
+        "name": "Hosted by Arisa"
+    },
+    "sub_description": {
+        "title": "Entire cabin in Atami, Japan",
+        "items": [
+            "6 guests",
+            "2 bedrooms",
+            "5 beds",
+            "1 bathroom"
+        ]
+    },
+    "amenities": [
+        {
+            "title": "Scenic views",
+            "values": [
+                {
+                    "title": "Bay view",
+                    "subtitle": "",
+                    "icon": "SYSTEM_VIEW_OCEAN",
+                    "available": true
+                },
+                {
+                    "title": "Beach view",
+                    "subtitle": "",
+                    "icon": "SYSTEM_BEACH",
+                    "available": true
+                },
+                {
+                    "title": "City skyline view",
+                    "subtitle": "",
+                    "icon": "SYSTEM_VIEW_CITY",
+                    "available": true
+                },
+                {
+                    "title": "Marina view",
+                    "subtitle": "",
+                    "icon": "SYSTEM_BOAT_SAIL",
+                    "available": true
+                },
+                {
+                    "title": "Mountain view",
+                    "subtitle": "",
+                    "icon": "SYSTEM_VIEW_MOUNTAIN",
+                    "available": true
+                },
+                {
+                    "title": "Ocean view",
+                    "subtitle": "",
+                    "icon": "SYSTEM_VIEW_OCEAN",
+                    "available": true
+                },
+                {
+                    "title": "Sea view",
+                    "subtitle": "",
+                    "icon": "SYSTEM_VIEW_OCEAN",
+                    "available": true
+                }
+            ]
+        },
+        {
+            "title": "Bathroom",
+            "values": [
+                {
+                    "title": "Bath",
+                    "subtitle": "",
+                    "icon": "SYSTEM_BATHTUB",
+                    "available": true
+                },
+                {
+                    "title": "Hair dryer",
+                    "subtitle": "",
+                    "icon": "SYSTEM_HAIRDRYER",
+                    "available": true
+                },
+                {
+                    "title": "Cleaning products",
+                    "subtitle": "",
+                    "icon": "SYSTEM_CLEANING_SUPPLIES",
+                    "available": true
+                },
+                {
+                    "title": "Shampoo",
+                    "subtitle": "",
+                    "icon": "SYSTEM_SHAMPOO",
+                    "available": true
+                },
+                {
+                    "title": "Conditioner",
+                    "subtitle": "",
+                    "icon": "SYSTEM_SHAMPOO",
+                    "available": true
+                },
+                {
+                    "title": "Body soap",
+                    "subtitle": "",
+                    "icon": "SYSTEM_SOAP",
+                    "available": true
+                },
+                {
+                    "title": "Bidet",
+                    "subtitle": "",
+                    "icon": "SYSTEM_TOILET_BIDET",
+                    "available": true
+                },
+                {
+                    "title": "Hot water",
+                    "subtitle": "",
+                    "icon": "SYSTEM_HOT_WATER",
+                    "available": true
+                }
+            ]
+        },
+        {
+            "title": "Bedroom and laundry",
+            "values": [
+                {
+                    "title": "Washing machine",
+                    "subtitle": "",
+                    "icon": "SYSTEM_WASHER",
+                    "available": true
+                },
+                {
+                    "title": "Essentials",
+                    "subtitle": "Towels, bed sheets, soap and toilet paper",
+                    "icon": "SYSTEM_TOILETRIES",
+                    "available": true
+                },
+                {
+                    "title": "Hangers",
+                    "subtitle": "",
+                    "icon": "SYSTEM_HANGERS",
+                    "available": true
+                },
+                {
+                    "title": "Bed linen",
+                    "subtitle": "",
+                    "icon": "SYSTEM_BLANKETS",
+                    "available": true
+                },
+                {
+                    "title": "Iron",
+                    "subtitle": "",
+                    "icon": "SYSTEM_IRON",
+                    "available": true
+                }
+            ]
+        },
+        {
+            "title": "Entertainment",
+            "values": [
+                {
+                    "title": "TV with Netflix",
+                    "subtitle": "",
+                    "icon": "SYSTEM_TV",
+                    "available": true
+                },
+                {
+                    "title": "Bluetooth sound system",
+                    "subtitle": "",
+                    "icon": "SYSTEM_SPEAKERS",
+                    "available": true
+                },
+                {
+                    "title": "Books and reading material",
+                    "subtitle": "",
+                    "icon": "SYSTEM_BOOK",
+                    "available": true
+                }
+            ]
+        },
+        {
+            "title": "Family",
+            "values": [
+                {
+                    "title": "High chair",
+                    "subtitle": "",
+                    "icon": "SYSTEM_HIGH_CHAIR",
+                    "available": true
+                },
+                {
+                    "title": "Children\u2019s tableware",
+                    "subtitle": "",
+                    "icon": "SYSTEM_CHILD_UTENSILS",
+                    "available": true
+                }
+            ]
+        },
+        {
+            "title": "Heating and cooling",
+            "values": [
+                {
+                    "title": "Air conditioning",
+                    "subtitle": "",
+                    "icon": "SYSTEM_SNOWFLAKE",
+                    "available": true
+                },
+                {
+                    "title": "Ceiling fan",
+                    "subtitle": "",
+                    "icon": "SYSTEM_FAN_CEILING",
+                    "available": true
+                },
+                {
+                    "title": "Heating",
+                    "subtitle": "",
+                    "icon": "SYSTEM_THERMOMETER",
+                    "available": true
+                }
+            ]
+        },
+        {
+            "title": "Home safety",
+            "values": [
+                {
+                    "title": "Exterior security cameras on property",
+                    "subtitle": "\u9632\u72af\u30ab\u30e1\u30e9\u304c\u3001\u7384\u95a2\u5916\u306b\u8a2d\u7f6e\u3055\u308c\u3066\u304a\u308a\u307e\u3059\u3002",
+                    "icon": "SYSTEM_SURVEILLANCE",
+                    "available": true
+                },
+                {
+                    "title": "Smoke alarm",
+                    "subtitle": "",
+                    "icon": "SYSTEM_DETECTOR_SMOKE",
+                    "available": true
+                }
+            ]
+        },
+        {
+            "title": "Internet and office",
+            "values": [
+                {
+                    "title": "Wifi",
+                    "subtitle": "",
+                    "icon": "SYSTEM_WI_FI",
+                    "available": true
+                },
+                {
+                    "title": "Dedicated workspace",
+                    "subtitle": "",
+                    "icon": "SYSTEM_WORKSPACE",
+                    "available": true
+                }
+            ]
+        },
+        {
+            "title": "Kitchen and dining",
+            "values": [
+                {
+                    "title": "Kitchen",
+                    "subtitle": "Space where guests can cook their own meals",
+                    "icon": "SYSTEM_COOKING_BASICS",
+                    "available": true
+                },
+                {
+                    "title": "Fridge",
+                    "subtitle": "",
+                    "icon": "SYSTEM_REFRIGERATOR",
+                    "available": true
+                },
+                {
+                    "title": "Microwave",
+                    "subtitle": "",
+                    "icon": "SYSTEM_MICROWAVE",
+                    "available": true
+                },
+                {
+                    "title": "Cooking basics",
+                    "subtitle": "Pots and pans, oil, salt and pepper",
+                    "icon": "SYSTEM_COOKING_BASICS",
+                    "available": true
+                },
+                {
+                    "title": "Dishes and cutlery",
+                    "subtitle": "Bowls, chopsticks, plates, cups, etc.",
+                    "icon": "SYSTEM_DISHES_AND_SILVERWARE",
+                    "available": true
+                },
+                {
+                    "title": "Freezer",
+                    "subtitle": "",
+                    "icon": "SYSTEM_REFRIGERATOR",
+                    "available": true
+                },
+                {
+                    "title": "Cooker",
+                    "subtitle": "",
+                    "icon": "SYSTEM_STOVE",
+                    "available": true
+                },
+                {
+                    "title": "Kettle",
+                    "subtitle": "",
+                    "icon": "SYSTEM_WATER_KETTLE",
+                    "available": true
+                },
+                {
+                    "title": "Coffee maker: pour-over coffee",
+                    "subtitle": "",
+                    "icon": "SYSTEM_COFFEE_MAKER",
+                    "available": true
+                },
+                {
+                    "title": "Wine glasses",
+                    "subtitle": "",
+                    "icon": "SYSTEM_MAPS_BAR",
+                    "available": true
+                },
+                {
+                    "title": "Rice cooker",
+                    "subtitle": "",
+                    "icon": "SYSTEM_RICE_COOKER",
+                    "available": true
+                },
+                {
+                    "title": "Barbecue utensils",
+                    "subtitle": "Grill, charcoal, bamboo skewers/iron skewers, etc.",
+                    "icon": "SYSTEM_GRILL",
+                    "available": true
+                },
+                {
+                    "title": "Dining table",
+                    "subtitle": "",
+                    "icon": "SYSTEM_DINING_TABLE",
+                    "available": true
+                },
+                {
+                    "title": "Coffee",
+                    "subtitle": "",
+                    "icon": "SYSTEM_COFFEE_MAKER",
+                    "available": true
+                }
+            ]
+        },
+        {
+            "title": "Location features",
+            "values": [
+                {
+                    "title": "Private entrance",
+                    "subtitle": "Separate street or building entrance",
+                    "icon": "SYSTEM_DOOR",
+                    "available": true
+                }
+            ]
+        },
+        {
+            "title": "Outdoor",
+            "values": [
+                {
+                    "title": "Private patio or balcony",
+                    "subtitle": "",
+                    "icon": "SYSTEM_PATIO_BALCONY",
+                    "available": true
+                },
+                {
+                    "title": "Outdoor furniture",
+                    "subtitle": "",
+                    "icon": "SYSTEM_ROOFTOP_DECK",
+                    "available": true
+                },
+                {
+                    "title": "Outdoor dining area",
+                    "subtitle": "",
+                    "icon": "SYSTEM_ROOFTOP_DECK",
+                    "available": true
+                },
+                {
+                    "title": "BBQ grill",
+                    "subtitle": "",
+                    "icon": "SYSTEM_GRILL",
+                    "available": true
+                }
+            ]
+        },
+        {
+            "title": "Parking and facilities",
+            "values": [
+                {
+                    "title": "Free parking on premises",
+                    "subtitle": "",
+                    "icon": "SYSTEM_MAPS_CAR_RENTAL",
+                    "available": true
+                },
+                {
+                    "title": "Free on-street parking",
+                    "subtitle": "",
+                    "icon": "SYSTEM_MAPS_CAR_RENTAL",
+                    "available": true
+                }
+            ]
+        },
+        {
+            "title": "Services",
+            "values": [
+                {
+                    "title": "Pets allowed",
+                    "subtitle": "Assistance animals are always allowed",
+                    "icon": "SYSTEM_PETS",
+                    "available": true
+                },
+                {
+                    "title": "Smoking allowed",
+                    "subtitle": "",
+                    "icon": "SYSTEM_SMOKING_ALLOWED",
+                    "available": true
+                },
+                {
+                    "title": "Long-term stays allowed",
+                    "subtitle": "Allow stays of 28 days or more",
+                    "icon": "SYSTEM_CALENDAR",
+                    "available": true
+                },
+                {
+                    "title": "Self check-in",
+                    "subtitle": "",
+                    "icon": "SYSTEM_KEY",
+                    "available": true
+                },
+                {
+                    "title": "Lockbox",
+                    "subtitle": "",
+                    "icon": "SYSTEM_SAFE",
+                    "available": true
+                }
+            ]
+        },
+        {
+            "title": "Not included",
+            "values": [
+                {
+                    "title": "Carbon monoxide alarm",
+                    "subtitle": "This place may not have a carbon monoxide detector. Contact the host with any questions.",
+                    "icon": "SYSTEM_NO_DETECTOR_CO2",
+                    "available": false
+                }
+            ]
+        }
+    ],
+    "co_hosts": [],
+    "images": [
+        {
+            "title": "It's also in the west.\n\nThe sunset time",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/48754a39-4b82-4b43-a575-d9841a11aadd.jpeg"
+        },
+        {
+            "title": "Listing image 2",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/2cc703a3-123b-4235-8157-eea489bc0327.jpeg"
+        },
+        {
+            "title": "A log cabin perched high above the forest.\nIn the morning you will be woken up by birds.\nIt feels like a treehouse.\n(The foundation is made of steel...)\nBeware of extreme altitude sickness.\n\nWaking up with birds whistling...\nThis log-cabin house is built on the hill side and more like a tree-house type of look.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/7f062540-de87-482e-9e73-4e5cd5a5fe82.jpeg"
+        },
+        {
+            "title": "210 \u00d7 160cm Simmons Premium Bed Frame & Simmons Golden Value Pillow Top Premium Mattress available.There are also two LED lights, outlets, and USB.\n\nQueen-sized bed with frame and mattress from Simmons.\nLED lighting, sockets and 2 USB sockets on the bed - side.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/fd6c31eb-1252-4388-93d4-28c4079e9e5f.jpeg"
+        },
+        {
+            "title": "The living room is spacious enough for 6 people to relax. Bring your own chairs and ingredients, and we're all excited!\n\nThe living-dining area has an enough space for 6 people -- like having dinner around the table, just chit-chatting etc.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/72a327be-4c75-4be6-ab1d-5612c67c090a.jpeg"
+        },
+        {
+            "title": "It's like a luxurious private bath for two...\nYou can also have exclusive use in the morning.\n\nA spacious bathtub where 2 poeples can fit in...\nEnjoy the morning bath!",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/a18ea578-b751-4fbe-89e5-45ac3764f925.jpeg"
+        },
+        {
+            "title": "45inch \u30d5\u30eb\u30c7\u30b8\u30bf\u30eb\u30c6\u30ec\u30d3\nNetFlix\u3082\uff01\n\n45 inch NET TV is available so that you can enjoy a movie night :-)",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/fd4965be-b2d7-47cf-aa1e-94619821ad08.jpeg"
+        },
+        {
+            "title": "\u30c6\u30e9\u30b9\u3068\u4e2d\u3067\u3001\u8a71\u3067\u3082\u3057\u307e\u305b\u3093\u304b\u30fb\u30fb\uff1f\n\nThe living-dining area and dec space can be connected by opening up wide window :-)",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/84cea194-88c3-4adf-9b46-400d2c62107d.jpeg"
+        },
+        {
+            "title": "On the balcony you can enjoy a BBQ while watching the ocean and the city view (and fireworks).\n\nYou can enjoy the great view of ocean and Atami Central (fireworks too).\nBBQ grill can be used as an extra service.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/22f12729-f195-4d57-a07d-126bad266e4c.jpeg"
+        },
+        {
+            "title": "From the bath, the sky and the stars are exclusive! You can see Sagami Bay in the distance.\n\nBathing with the great ocean view in far away...",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/5dcfdcad-d3eb-4d71-b9f4-25643aae5d0e.jpeg"
+        },
+        {
+            "title": "The sign at the entrance.\nIf you get here, take a breath!\n\nThe sign of the accommodation \nAlmost there!",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/a26db4f3-c242-476c-bb90-06db2e49cdb2.jpeg"
+        },
+        {
+            "title": "\u5c71\u3068\u71b1\u6d77\u306e\u8857\u4e26\u307f\u6d77\u3092\u671b\u307f\u306a\u304c\u3089\u3001\u77f3\u5f35\u308a\u306e\u304a\u98a8\u5442\u3067\u6e29\u6cc9\u3092\u30fb\u30fb\n\nEnjoy the local hot springs with the great view out there...",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/237c2647-10b8-4417-be61-aa4bca4ba67d.jpeg"
+        },
+        {
+            "title": "Thoughtful furniture made in the woods everywhere.\nThe branches are also a fine pillar.\nCooking is also done while having a little work or conversation at the counter.\n\nWooden furniture will give you a comfortable space.\nThe kitchen bar can be also used as a little working space.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/2ffff86c-3d29-4099-83fc-d70731b635fc.jpeg"
+        },
+        {
+            "title": "After a long night after a day of playing, talk in the space on the 2nd floor...\n\nEnjoy the bed - time - tea upstairs...",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/b31e9d4a-e2a2-48fa-8f21-5396ecde9d3e.jpeg"
+        },
+        {
+            "title": "Loft! Yes. After a conversation on the couch, the sofa converts into a mattress!\nYou can put up the futons and have fun sleeping together!\n\nSofas on the loft can be turned into futon mattresses!\nYou can just have a great night with your own company :-)",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/2a8c7697-17f5-4f04-aa2c-a700880d8cba.jpeg"
+        },
+        {
+            "title": "We also have a deck table & chairs so you can relax on the balcony...\nEverything in the pictures is provided. Please prepare your own ingredients.\n\nChilling at the dec balcony...",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/b40bdf47-3094-4c87-8d1a-9f3744fb7983.jpeg"
+        },
+        {
+            "title": "Introducing the latest Toto Neorest!\n\nToilet with a newest Toto \"Neorest\"!\n",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/1ccb7993-e258-4037-99de-ca08ab2e3834.jpeg"
+        },
+        {
+            "title": "If you can do it,\nThe world of the Sylvanian family is here!\nI don't know...\n",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/fa927f9d-71f5-4800-9edb-f2fc008546ba.jpeg"
+        },
+        {
+            "title": "The strongest toilet compatible with coronavirus.\nIt is automatically cleaned by opening and closing the lid without touching it.w\n\nTouch-less toilet which is great for this COVID-19 situation.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/844b1f06-51e6-4436-94ea-a8969a03fd07.jpeg"
+        },
+        {
+            "title": "We also provide a groove in the winter.\n\nThe \"snow peak\" stove can be used during winter season!",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/f70b50f7-47c9-489f-b1b6-d70e57e1b945.jpeg"
+        },
+        {
+            "title": "Eric Clapton is amazing! It sounds super nice!\nIt looks like a fender\n\nmontery guitar amp.The concept is \"no compromise even with Bluetooth speakers\"\nIt is powerful because it is up to 120W, but it is a villa area, so it is nice and stylish to ask quietly.\n\nBluetooth speaker by FENDER MONTEREY\nThe great sound, powerful though please consider the neighbours when you use :-)",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/a58e67a4-e8b0-4ce0-8d1c-e7aab12629b7.jpeg"
+        },
+        {
+            "title": "In the evening, it turns into a mountain lodge bar...\nLighting with an IDEE and watching a movie on a sofa.\n\nFeel the wood with heated floors and hang out on the sofa bed!\n\nLike a little cabin in the mountain...\nYou can sit around the warmed up floor or chill on the sofa.\nEnjoy your time here :-)",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/6eb885b2-dcdf-4212-92e8-e7ec08de9849.jpeg"
+        },
+        {
+            "title": "Log table.\nI thought I'd make my own, but I'm going to do it.\nIt was cheaper to buy it, so I bought it.\n\nHandmade log table\n",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/391d389f-1d18-43d9-ab01-743a7bdcf128.jpeg"
+        },
+        {
+            "title": "\u6728\u3068\u77f3\u306e\u5e83\u3081\u306e\u304a\u98a8\u5442\n\uff12\u4eba\u306f\u697d\u52dd\u306b\u5165\u308c\u307e\u3059\uff01\n\nBathroom in a japanese traditional style",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/7e3818a2-c0ec-4427-9114-d96e6b3d09b9.jpeg"
+        },
+        {
+            "title": "Living/dining area",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/6964a180-bdaf-4bdb-abe7-f74c9984351e.jpeg"
+        },
+        {
+            "title": "Clean Kitchen and Kitchen Storage\nDishes are here and there is plenty of storage.\nThere is an electric kettle, microwave, hot plates and pots.\n\nWell-cleaned kitchen and other areas to cook!\nI have prepared such as electric kettle, microwave, hot plates and pans/pots.\n",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/dafa9d7d-73ac-4c42-a23d-2d88fe2a48ff.jpeg"
+        },
+        {
+            "title": "It is a 3-burner IH built-in stove.\nHow do I warm up? I have a common question, but please turn on the main switch under 10 meters.\n\nThe electric stove (IH) is available during your stay.\nPlease press the main switch (10cm below) to start heating up.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/69feaf14-710b-447b-a83c-d79b5f62bf5a.jpeg"
+        },
+        {
+            "title": "Listing image 28",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/033fc4b1-c8fe-4e44-a660-0a4c1a57dfca.jpeg"
+        },
+        {
+            "title": "Please enjoy Atami Onsen.\n\nEnjoy the local hot springs...",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/e76d7e74-177a-4822-9fc5-41d772a8bea6.jpeg"
+        },
+        {
+            "title": "We also have a baby chair!\n\nThe table can be adjusted in size and height.\nHigh ceilings, dining.\n\u30ed\u30fc\u30c6\u30fc\u30d6\u30eb\u3082\u81ea\u7531\u81ea\u5728\u3002\n\nA baby chair is prepared!\nThe table can be adjusted so you can use as either dining table or low table.\n",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/8f2cce9e-126f-41a6-b554-4c3fc00cd8ca.jpeg"
+        },
+        {
+            "title": "Clean washroom\nThere are also towels and linens, amenities and a washing machine (10kg). Longer stays are also possible.\n\n\uff08\u4e7e\u71e5\u306f\u98a8\u304c\u5fc3\u5730\u3088\u304f\u3001\u5916\u306b\u5e72\u3057\u305f\u3089\u3059\u3050\u306b\u4e7e\u304f\u304b\u3082\uff01\uff1f\uff09\n\nBathroom\nI am preparing towels, amenities and washing machine so you can even consider here in long term :-)",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/6aa1978d-5ecc-4773-9648-5b5694f46bc9.jpeg"
+        },
+        {
+            "title": "\u3088\u3046\u3053\u305d\uff01\u5165\u308a\u53e3\u3067\u3059\u3002\n\nWelcome to my house!\nHere is the front porch.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/95790799-9bed-4722-898d-5b55eaeef940.jpeg"
+        },
+        {
+            "title": "\u661f\u7a7a\u3092\u5f85\u3061\u306a\u304c\u3089\u30fb\u30fb\n\nWaiting for the starry sky to come out...",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/9c88cb77-0ba8-4587-98ea-02a7bd92acbd.jpeg"
+        },
+        {
+            "title": "When it's cloudy, there are stars in the room as well.\n\nEven some stars inside the accommodation...",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/7107a5dd-dfd2-479c-80aa-6be63597117f.jpeg"
+        },
+        {
+            "title": "We also provide a workspace where you can work and study while watching the stars in the morning and watch the stars in the morning.\n\n\u30af\u30c3\u30b7\u30e7\u30f3\u30c1\u30a7\u30a2\u30fc\u3068\u30d1\u30a4\u30f3\u6750\u306e\u673a\u3067\u3001\u89e6\u308a\u5fc3\u5730\u304cGOOD\u3002\n\nWorking space is set beside the bedroom.\nYou can do work or study with birds whistling and starry sky...",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/ce067feb-b83a-4912-94b5-fa371eda0bbb.jpeg"
+        },
+        {
+            "title": "Master Bedroom\n210 \u00d7 160cm Simmons Premium Bed Frame & Simmons Golden Value Pillow Top Premium Mattress available.LED\u96fb\u706f\u3084\u30b3\u30f3\u30bb\u30f3\u30c8\u3001USB\u30822\u53e3\u3002\n\nMain bedroom with the queen-sized bed",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/889f9773-3a0c-4d28-b085-eb8898dbf0d8.jpeg"
+        },
+        {
+            "title": "The loft\nis usually a couch where you can play cards and games, but if you open it up, you'll get a mattress (surprise!) \nThis is the only place where 3 adults can sleep comfortably.\n\nChit-chat free by sitting on sofas in the loft... it is like a secret base: -)",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/9e1303b4-9447-452a-b099-611502d47ddb.jpeg"
+        },
+        {
+            "title": "Fireworks Eating!\nEnjoy alcohol in the distance as an adult.\n\nEnjoy the time in the balcony with Atami Central night view...\nYou can even see the fireworks if the dates are well-chosen!",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/e12cfbb8-528b-4501-af37-23d6f9c62e57.jpeg"
+        },
+        {
+            "title": "In summer, buy sashimi, pasta and white wine are good!\n\u51ac\u306f\u934b\u304b\u306a\u3002\n\nThe dining area will give you many hints of your dinner...",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/9e61e3df-896f-4aca-b51f-b685d7371254.jpeg"
+        },
+        {
+            "title": "\u5e02\u8857\u3082\u9060\u304f\u306b\u671b\u3081\u3001\u82b1\u706b\u3082\u898b\u3048\u307e\u3059\n\nAtami Central in far distance\nFireworks will go up from this coast.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/d2ca99ce-c2a8-4f31-bcfa-3d765ffe40ea.jpeg"
+        },
+        {
+            "title": "Kitchen \n\nKitchen",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/6f4a2ad3-b5e7-40de-b103-8203c96ee708.jpeg"
+        },
+        {
+            "title": "You can smell the wood from the front door! We also have amenity slippers and regular slippers.\n\nBirds welcome!\n\nEntrance",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/3bb79f93-bcf9-4152-9724-c6776e672f15.jpeg"
+        },
+        {
+            "title": "Wood and stone baths\nThe two of you will be able to win with ease!\n\nBathroom \n",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/d6bab21f-fd20-4f17-b7e9-e8283abd69db.jpeg"
+        },
+        {
+            "title": "How about coffee in the morning while being surrounded by nature...?\nWhen it's cold, there's also a real Muang somewhere.\n\na coffee in the morning is the best things...",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/a2d5381a-85d4-49fc-a7bc-46d6bed857c3.jpeg"
+        },
+        {
+            "title": "\u5927\u578b\u7a93\u3067\u3001\u5ba4\u5185\u3068\u30c6\u30e9\u30b9\u3067\u3001\u4f1a\u8a71\u3082\u5f3e\u307f\u307e\u3059\u3002\n\nMassive windows will make you feel like you are living surrounded by bushes.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/2f35b7b0-80a8-4002-a623-cd316240f233.jpeg"
+        },
+        {
+            "title": "Fold the table into a low table\nYou can also adjust the lighting with the remote control.\n\nChilling in the living room area...\nThe light of the living room can be adjusted by the remo.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/fa6c38ee-7d1a-412b-8fa1-82f950970c0f.jpeg"
+        },
+        {
+            "title": "We also provide essential working desks & chairs for work-cation.\nThe pine table is comfortable to touch with.\n\nThe working space is prepared for you: -)",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/e8285ad8-c6cf-440c-b3ff-bbd2a603353e.jpeg"
+        },
+        {
+            "title": "Place a rail on the counter, too,\nFeel free to move the lights!\n\nTable lights can be given later in many ways.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/9cbc47fe-8698-41d7-a294-8638c73fd7d5.jpeg"
+        },
+        {
+            "title": "The humidifier and air purifier are also the latest in the 222 model.\n\nThe newest type of humidifier and air fresher are prepared.\n",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/9872caf1-38c6-4cb9-8cb9-8f354930507f.jpeg"
+        },
+        {
+            "title": "Loft! Yes. After a conversation on the couch, the sofa converts into a mattress!\nYou can put up the futons and have fun sleeping together!\n\nLoft area on upstairs",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/50cd05cf-4853-49ae-887b-744b3b24ba25.jpeg"
+        },
+        {
+            "title": "Everything that touches your hand is gentle.\nExperience the life of such a log cabin.\n\nEnjoy the log-cabin stay!\n",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/779ca768-1e89-4131-b325-3096f34cfd09.jpeg"
+        },
+        {
+            "title": "Log cabin evening",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/bea2f3b5-f18b-4da2-8399-7019abde4e5c.jpeg"
+        },
+        {
+            "title": "Make your door stylish and your keys made in Italy!\nThere are also tips on how to secure the locks, so please check carefully after booking.\n\nThe front door is made by Italy.\nThe lock of the front door is little tricky so please make sure to read the guide beforehand.\n",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/3e05fdce-fce3-4486-9202-ff8ae697e2d5.jpeg"
+        },
+        {
+            "title": "From the 2nd floor loft, the ceiling fan circles slowly to circulate the air.\n\u590f\u306f\u6dbc\u3057\u304f\u3001\u51ac\u306f\u6e29\u304b\u3044\u52b9\u679c\u304c\u3002\n\nThe ceiling fan will give you cool wind and warmth.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/efb39107-5ed8-46e9-827b-a79f4eb3e27d.jpeg"
+        },
+        {
+            "title": "The evening and sunrise are Golden Time.\n\nThe view of morning and evening are the best!\n",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/4967218a-c5cf-48e7-b7c9-2b30393cf914.jpeg"
+        },
+        {
+            "title": "Behind the house (on the entrance side) is\nThere are hot springs and water facilities, and the privacy is perfect?\n\nIt is tucked away on a gravel road, so please check carefully before you come.\n\nThe pump of the hot springs are there on the backside of the accommodation.\nMy accommodation seems to hidden if you are coming from a temporary parking space!",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/f3f6348e-383e-4a4e-a0fc-5c443133dcfa.jpeg"
+        },
+        {
+            "title": "\u6625\u306f\u30d9\u30c3\u30c9\u30b5\u30a4\u30c9\u304b\u3089\u685c\u304c\u6e80\u958b\u3067\u3059\uff01\n\nYou can see cherry blossoms out from the window in the spring...",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/3705106e-ab20-4238-9504-292b59e2262b.jpeg"
+        },
+        {
+            "title": "How do I sleep while looking out the window...\nI can sleep if I think about it.\n\nBedside windows will wake you up with the morning sun light.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/7351599b-9e42-43cb-a802-c4277fbe1ecb.jpeg"
+        },
+        {
+            "title": "\u4eca\u65e5\u3082\u3086\u3063\u304f\u308a\u3068\u3001\u65e5\u306f\u843d\u3061\u3066\u3044\u304d\u307e\u3059\u30fb\u30fb\n\nThe sunset view is the best thing in the world...",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/88c358ea-aa4d-423b-99ed-1f27de8dc837.jpeg"
+        },
+        {
+            "title": "The hot springs were hard to find, so the carpenter wrote in a magic (crying)",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/c51e70ee-9f82-485c-93df-e3cf8df0c9e8.jpeg"
+        },
+        {
+            "title": "How about dinner while watching the night view or fireworks...?\n\nWhat about the dinner on the terrace?",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/0741f1b8-0c57-4a9a-9060-58ec5993410d.jpeg"
+        },
+        {
+            "title": "Shoe locker.\nBirds will welcome you.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/e07a0067-345b-4c5c-b266-4914249cb548.jpeg"
+        },
+        {
+            "title": "I made WiFi and rabbits. Someone...",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/2f5278d3-e66b-4670-95a5-be16a2b935a0.jpeg"
+        },
+        {
+            "title": "I bought this too!\nHere's what you can expect:",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/b52b6da8-70a4-4c06-86dc-f491122078cf.jpeg"
+        },
+        {
+            "title": "\u3053\u306e\u5225\u8358\u5730\u306b\u3053\u308c\u4ee5\u4e0a\u3001\u4e0a\u306b\u5efa\u7269\u306f\u3042\u308a\u307e\u305b\u3093\u3002\n\u723d\u5feb\u3067\u3059\u3002\n\nThis accommodation is located on the very top of this whole holiday villa area.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/97c4169f-0d86-4913-a29a-f95b221265ca.jpeg"
+        },
+        {
+            "title": "During cherry blossom season, cherry blossoms fill the windows above the bed.\n\nCherry blossoms in the spring",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/4fa17516-a037-45ee-87d5-82cb0a8d31f8.jpeg"
+        },
+        {
+            "title": "I feel like the sky is close today.\nThere are two benches and plenty of chairs.\n\nHow the sky is so close...",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/77b5e9ed-fac3-42bd-ab84-dc7e0b964e4c.jpeg"
+        },
+        {
+            "title": "It's a BBQ stove.\nIt's another option, but please feel free to use it!\n\nBBQ grill can be used as an extra option.\nPlease let me know beforehand if you would like to use it!",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/7b7fee79-1def-4d9b-9e6d-b3befb4e6097.jpeg"
+        },
+        {
+            "title": "\u3053\u306e\u6642\u9593\u304c\u597d\u304d\u3067\u4f55\u5ea6\u3082\u5199\u771f\u306b\u64ae\u3063\u3066\u3057\u307e\u3044\u307e\u3057\u305f\u30fb\u30fb\n\nLoving this time of the day as you may already see similar photos ;-)",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/70e1eb0a-f1d0-42bd-b4d8-01a2dd1883b5.jpeg"
+        },
+        {
+            "title": "Listing image 70",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/e21f8941-d84f-4cdc-8bfa-c156f7d6ddc5.jpeg"
+        },
+        {
+            "title": "Nearby supermarket\nThe nearest supermarket",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/11d094af-692f-4e16-89cc-7f306de0aef4.jpeg"
+        },
+        {
+            "title": "\u300c\u6771\u6d77\u300d\u3067\u306f\u3001\u7b4f\u91e3\u308a\u304c\u697d\u3057\u3081\u307e\u3059\uff01\n\nYou can experiencing fishing and eat what you got at the restaurant!",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/4f5c4871-3eff-429b-a9fd-f9d80b1f87a1.jpeg"
+        },
+        {
+            "title": "\u7db2\u4ee3\u6e2f/Ajiro Harbour.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/53c8dfa9-f024-4d12-8010-21eb76a8bc0d.jpeg"
+        },
+        {
+            "title": "\u71b1\u6d77\u306f\u30b9\u30a4\u30fc\u30c4\u306e\u8857\u3067\u3082\u3042\u308a\u307e\u3059\uff01\nAtami is now well-known for sweets!",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/afddd30d-6399-4fa1-823b-ea485ccfc8c9.jpeg"
+        },
+        {
+            "title": "Dream of Strawberry Strawberry Atami House",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/6794bd79-428b-4675-8b12-d307a343450c.jpeg"
+        },
+        {
+            "title": "\u5730\u5143\u306e\u548c\u83d3\u5b50\u5c4b\u3055\u3093\nLocal Japanese sweets shop",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/a74de45d-489b-4aae-b8e5-7540e9d2b58c.jpeg"
+        },
+        {
+            "title": "Listing image 77",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/fa1cfe21-07f2-48d8-a0d0-b576261b71ab.png"
+        },
+        {
+            "title": "Atami pudding is also a souvenir!",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/3d1dcc38-84c1-4a4a-afcd-34ca6e7b48fd.jpeg"
+        },
+        {
+            "title": "The night view of Atami is said to be one of the most stunning views in Japan\nNight view of Atami is one beautiful sights in japan.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/d5913406-a42a-46cc-898d-cbc347f47865.jpeg"
+        },
+        {
+            "title": "Listing image 80",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/95ec5555-c3a4-4a94-bc4a-493950ecc388.jpeg"
+        },
+        {
+            "title": "Nagahama Beach\n\nNagahama Beach",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/c376c99a-20c6-47f5-a485-8de0f9ec6941.jpeg"
+        },
+        {
+            "title": "Local fish set meals and specialty ika-menchi shops",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/69ecec4b-b703-416d-913b-70920306758c.png"
+        },
+        {
+            "title": "Restaurants popular with tourists",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/7ac0ce47-6aa0-4f7b-a769-9c3767d2926d.png"
+        },
+        {
+            "title": "Atami Station",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/33cb5fda-0ae9-49ed-b34c-8cde4d1bb74c.png"
+        },
+        {
+            "title": "Listing image 85",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/b8ecbb4b-6e18-469f-9ba4-7cbb82a538dc.png"
+        },
+        {
+            "title": "Listing image 86",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/311431bd-62c5-4266-a515-9892770f8041.png"
+        },
+        {
+            "title": "Instagrammable seafood bowls!",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/6673f9e7-2e80-4b01-9079-a21ba0be5bea.png"
+        },
+        {
+            "title": "Listing image 88",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/909975f1-6d44-4b40-a702-23456b6634d7.jpeg"
+        },
+        {
+            "title": "Local sushi restaurants\nLocal Sushi restaurant",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/032a8752-1114-4d98-beb0-fbf39bdd3502.jpeg"
+        },
+        {
+            "title": "Kinomiya \nShrine",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/eccd87d1-97f3-4621-beb3-72f32d33fa16.jpeg"
+        },
+        {
+            "title": "Atami Marina Atami\nMarina",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/9d6d6988-56ea-4e3d-9934-49c9e1786e50.jpeg"
+        },
+        {
+            "title": "Listing image 92",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/6550b50e-61cd-453f-8dd2-27306168057f.jpeg"
+        },
+        {
+            "title": "Benefits of Changlong and Love!",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/b2f5e14b-1bb1-4dab-8bd9-ec650f1f3922.jpeg"
+        },
+        {
+            "title": "Atami \nPlum Garden",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/c28a992e-6fdc-42a8-b5d2-40832da2bf5e.jpeg"
+        },
+        {
+            "title": "Atami's iconic museum, MOA Museum \nMoa Museum OF art",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/3574aa55-ac7e-44c6-84ba-4ba7d56b1261.jpeg"
+        },
+        {
+            "title": "Listing image 96",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/46798b86-afaf-4f4f-8994-733c1071296f.jpeg"
+        },
+        {
+            "title": "Listing image 97",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/77dc914b-820d-4e84-adbb-07eefde2ece0.jpeg"
+        },
+        {
+            "title": "\u71b1\u6d77\u3053\u304c\u3057\u307e\u3064\u308a\nTraditional festival in Atami",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-597680151283031197/original/f5f63f25-c957-4aa4-a4c1-55347c011daa.jpeg"
+        }
+    ],
+    "location_descriptions": [
+        {
+            "title": "Atami, Shizuoka, Japan",
+            "content": "This accommodation is located in seaside holiday housing area surrounded by beautiful woods.<br />You will be able to see the ocean in far distance and if you are lucky enough, you might be able to see a top of Mt.Fuji on your left!<br /><br />Ajiro station is about 5km away from my accommodation and you will need to ride up the hill all the way up. If you will be coming by train, I will suggest you to take a taxi from the station. <br />(I think it would cost about 1,500 yen if you use a taxi.)<br /><br />You won't have troubles finding supermarkets and restaurants as there are so many of them around Ajiro Central.<br />This area has so many great aspects; beach, trekking course, some sightseeing places such as Kinomiya shrine, Atami central and Hatsushima (island).<br />I am sure that you won't get bored staying here!<br /><br />Please enjoy this relaxed local living which you wouldn't be able to do in a rushy, busy city life."
+        },
+        {
+            "title": "Getting around",
+            "content": "Nearest stations\uff1a<br />Ajiro St.\uff08Ito line\uff09<br /><br />\u25cb 10 mins drive to Ajiro St.<br />\u25cb 25 mins drive to Atami Central<br />\u25cb 1 hr drive to Hakone hot springs <br />\u25cb 2 hrs drive to Tokyo<br />\u25cb 2 hrs drive to Yokohama<br />\u25cb 3 hrs drive to Narita Airport<br />You can get to Tokyo St. to Ajiro St. within an hour using both a bullet train and local train.<br /><br />Free parking lot\uff1a1 car<br />\u203b This listing is built in the hilly area so you will need to walk up stairs to get to the listing from the parking lot. If you have luggage to carry, you can park your car temporary at the space I will be showing in the check-in guide."
+        }
+    ],
+    "highlights": [
+        {
+            "title": "Free cancellation for 48 hours",
+            "subtitle": "",
+            "icon": "SYSTEM_CALENDAR"
+        },
+        {
+            "title": "Self check-in",
+            "subtitle": "Check yourself in with the lockbox.",
+            "icon": "SYSTEM_CHECK_IN"
+        },
+        {
+            "title": "Furry friends welcome",
+            "subtitle": "Bring your pets along for the stay.",
+            "icon": "SYSTEM_PETS"
+        }
+    ],
+    "description": "Just to feel the breeze and nature - this log-cabin house is where you will be able to have a relaxed time.<br />Trying to open up your five senses and gain what you need in this COVID-19 situation :-)<br /><br />Ajiro is the small town of Atami and has so many yummy local restaurants and great activities such as fishing and water activities at the beach.<br /><br />I have been receiving all the great reviews from everyone fortunately :-)<br />I am sure you will have a tremendous trip in Atami/Izu/Hakone by staying here!<br /><br /><b>The space</b><br />My accommodation is in the villa area just 10 minutes away from Ajiro station.<br />You will need to go up a hilly road but you will see a worthy view at the end!<br />From my accommodation, you will be able to see a great ocean and Atami Central area in a far distance...even Mt.Fuji if the weather is clear :-)<br /><br />This log-cabin house will give you warm and heartfelt space.<br />Please enjoy your stay here in the nature-house as a family, friends or couple to have a special time.<br /><br />I have prepared Wi-Fi to make your stay comfortable!<br />Please feel free to use it during your stay to work or have a movie night by watching Netflix :-)<br /><br />In the main bedroom, I have prepared a queen-sized bed.<br />There is a cherry blossom tree just outside the bedroom so you will be able to enjoy \"Ohanami\" in the spring!<br />Bathroom is one of recommendations of the listing: you can enjoy natural hot springs in the traditional Japanese bath.<br /><br />Also if you could pay me the extra cost and stick with my house rules, I am more than happy to rent you either BBQ grill and fireplace :-)<br /><br />I am sure you won't get bored during your stay as there are so many great local restaurants where you can have yummy seafood and sightseeing place such as beaches :-)<br />You can also visit Hakone area or other popular places of Shizuoka-ken including Atami Central during your stay here in Ajiro area!<br /><br />\u2605Rooms\u2605<br /><br />1F: living-dining room (floor warmer is available!), kitchen, outside dec (a table with bench and 2 chairs, 2 relaxing chairs), bathroom (hot springs is available), toilet<br />2F: 2 bedrooms, working space<br /><br />\u2605Amenities\u2605<br /><br />[Rooms]<br />\u30fbWiFi \uff08home WiFi\uff09<br />\u30fb1 Queen-sized bed<br />\u30fb3 Futon mattress<br />\u30fb1 Sofa bed<br />\u30fbTV (connected with the internet)<br />I have prepared a wide-screen TV which is connected with Netflix. Please feel free to use the function during your stay!<br />\u30fbHumidifier<br />\u30fbWashing machine<br />\u30fbWashing detergent<br />\u30fbIron<br />\u30fbWorking chair & desk<br />\u30fbDec chairs & table<br /><br />[Kitchen]<br />\u30fbFridge<br />\u30fbMulti cooker (it can be used as a rice cooker)<br />\u30fbElectric kettle<br />\u30fbMicrowave<br />\u30fbCoffee dripper<br />\u30fbHot plate<br />\u30fbPots<br />\u30fbPans<br />\u30fbKnives<br />\u30fbCutlery<br />\u30fbPlates/cups<br />\u30fbSeasonings (Please understand that some seasonings might be run out.)<br />We don\u2019t prepare any paper towels, dish towels or wipes.<br />If you need one to do the cooking, please kindly bring your own.<br /><br />[Bathroom]<br />\u30fbBody soap<br />\u30fbShampoo<br />\u30fbConditioner<br /><br /><b>Guest access</b><br />Please feel free to use the entire house.<br /><br /><b>Other things to note</b><br />\u30fbPlease use a designated BBQ equipment.<br />As a few guests don't pack up BBQ within the time I ask them to (until 7PM), I only allow BBQ for those guests who stay more than 1 night. <br />If you would like to use it, please message me beforehand as it costs extra.<br /><br />\u30fbYou can bring only ONE small sized dog with the extra fee. Please message me beforehand if you would like to take your doggie with you.<br /><br />\u30fbyou CANNOT smoke inside the house.<br />Smoking is not allowed on this property except for outside balcony and please be careful with the use of fire.<br /><br />\u30fbPlease separate the trash.<br />If you left way more than the normal use and big-sized trash (such as suitcases), please understand that I might be able to asking you to pay the extra fee.<br /><br />\u30fbThe gas meter may get stopped when you use the gas too much.<br />When that happens, please read through the guidance left inside the listing or message me.<br /><br />\u30fbYou can go down the hilly part of my garden however, please be careful as it is quite steep and there are some wild animals out there.<br /><br />\u30fbThe room where you can put 3 futon mattresses is the space in-between the bedroom with a queen-sized bed and stairs. If you are worried about the structure of the accommodation, please feel free to send me an inquiry.<br /><br />[For guests who stay more than 2 weeks]<br />I can schedule a cleaning, changing linens and adding amenities during your stay so please feel free to message me if you want one.<br /><br />We are asking guests to let me know the information below so that we can operate legally as official hotel-licensed listings.<br />1) The names of all the guests in your booking<br />2) Each of the guests\u2019 home addresses<br />3) Each of the guests\u2019 occupations<br />4) Each of the guests\u2019 nationalities and passport numbers<br />5) Scanned images of guests\u2019 passports<br /><br /><b>Registration number</b><br />Hotels and Inns Business Act | \u9759\u5ca1\u770c\u71b1\u6d77\u4fdd\u5065\u6240 | \u71b1\u4fdd\u885b\u7b2c331\u53f7\u306e91",
+    "title": "",
+    "language": "en",
+    "price": {
+        "ammount": 0,
+        "currency_symbol": "",
+        "qualifier": ""
+    }
+}
