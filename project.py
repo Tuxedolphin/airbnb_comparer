@@ -45,6 +45,7 @@ class Listing:
         info["coordinates"] = json.dumps(data["coordinates"])
         info["super_host"] = data["is_super_host"]
         info["capacity"] = data["person_capacity"]
+        
 
         # Average rating
         info["average_rating"] = (
@@ -164,63 +165,6 @@ def main():
     # Setting up the title page
     root = customtkinter.CTk()
     root_set_up(root)
-    
-    # Setting up the UI for the title page
-    # Defining a grid
-    root.columnconfigure(0, weight=1)
-    root.columnconfigure(1, weight=1)
-    root.rowconfigure(0, weight=3)
-    root.rowconfigure(1, weight=2)
-    
-    # UI elements
-    title = customtkinter.CTkLabel(root, text="Airbnb Comparer")
-    title.grid(row=0, column=0, columnspan=2)
-
-    # Button to add new window for inserting
-    button_insert = customtkinter.CTkButton(root, text="Add a Listing!")
-
-    # Button to go compare
-    button_compare = customtkinter.CTkButton(root, text="Let's Compare!")
-        
-    
-    def change_compare() -> None:
-        """Changes the root screen to the compare screen by hiding all the elements in the root"""
-        
-        # Make the elements of title page disappear
-        button_insert.pack_forget()
-        title.pack_forget()
-        button_compare.pack_forget()
-        
-        # Sets up the compare screen
-        root.title("Airbnb | Compare")
-        compare_title = "Comparing in City" #TODO dynamically change the city name
-        
-        # Define a grid for the compare screen
-        root.columnconfigure(0, weight=1)
-        root.columnconfigure(1, weight=3)
-        root.rowconfigure(0, weight=3)
-        root.rowconfigure(1, weight=1)
-        
-        # Place button in bottom left
-        button_title = customtkinter(root, text="Back to Title", command=change_title)
-        button_title.grid(row=1, column=0)
-        
-        
-    def change_title() -> None:
-        """Changes the compare screen back to the main title screen by doing the reverse"""
-        # Making elements in compare screen invisible
-        ...
-        
-        
-    # Setting up functionality for the buttons in title page
-    button_compare.configure(command=change_compare)
-    button_compare.grid(row=1, column=1)
-    
-    button_insert.configure(command=lambda: new_insert(root))
-    button_insert.grid(row=1, column=0)
-    
-    
-    
 
     # Main loop for root to run
     root.mainloop()
@@ -230,48 +174,97 @@ def root_set_up(root: customtkinter.CTk) -> None:
     """Sets up the main page of the application"""
 
     # System Settings
-    customtkinter.set_appearance_mode("system")
+    customtkinter.set_appearance_mode("dark")
     customtkinter.set_default_color_theme("blue")
 
     # root Frame
-    root.geometry("720x480")
+    # Getting dimensions of screen
+    width = 0.5 * root.winfo_screenwidth()
+    height = 0.5 * root.winfo_screenheight()
+    
+    # Setting pop up to be full size              
+    root.geometry("%dx%d" % (width, height))
     root.title("Airbnb")
     
+    # Setting up UI for main page
     
-def insert_set_up(insert: customtkinter.CTk) -> None:
-    """Sets up the page for inserting additional links"""
-    # System Settings
-    customtkinter.set_appearance_mode("system")
-    customtkinter.set_default_color_theme("blue")
-
-    # insert Frame
-    insert.geometry("720x480")
-    insert.title("Airbnb | add link")
+    # Define a grid for the compare screen
+    root.columnconfigure(0, weight=1)
+    root.columnconfigure(1, weight=8)
+    root.rowconfigure(0, weight=12)
+    root.rowconfigure(1, weight=1)
+    root.rowconfigure(1, weight=1)
+    
+    # Place button in bottom left
+    button_insert = customtkinter.CTkButton(root, text="Insert a Listing!", command=lambda: new_insert(root, status))
+    button_insert.grid(row=1, column=0, sticky="s")
+    
+    # Status Label
+    status = customtkinter.CTkLabel(root, text="This is where status will go")
+    status.grid(row=2, column=0, sticky="n",  pady=10)
+    
+    # Place tabview menu at top left
+    menu_tab = customtkinter.CTkTabview(root)
+    menu_tab.grid(row=0, column=0, sticky="nsew", padx=20, pady=3)
+    
+    # Create tabview
+    tab_main = menu_tab.add("Menu")
+    tab_settings = menu_tab.add("Settings")
+    
+    # Setting up main in tabview
+    tab_main_title = customtkinter.CTkLabel(tab_main, text="Hello")
+    tab_main_title.pack()
+    
+    # TODO: Insert main title page (check which columns to show, which location to search, and title) and settings (which columns to show, which amenities to show)
+    
+    # Place scrollable frame for table
+    table_frame = customtkinter.CTkScrollableFrame(root, orientation="vertical")
+    table_frame.grid(row=0, column=1, stick="nsew", padx=20, pady=20, rowspan=3)
+    
+    # TODO: Add a auto generated table
     
 
-def new_insert(root: customtkinter.CTk) -> None:
+def new_insert(root: customtkinter.CTk, status: customtkinter.CTkLabel) -> None:
     """Creates a new window for inserting new listings"""
     insert = customtkinter.CTkToplevel(root)
-    insert_set_up(insert)
+    insert.attributes("-topmost", True)
+    
+    # insert Frame
+    insert.title("Airbnb | add link")
+    
+    # Setting up grid
+    insert.columnconfigure((1,2,3,4), weight=1)
+    insert.rowconfigure(1, weight=3)
+    insert.rowconfigure(3, weight=1)
 
     title = customtkinter.CTkLabel(insert, text="Add a New Listing!")
-    title.pack(padx=10, pady=10)
+    title.grid(row=0, column=0, columnspan=4, padx=20, pady=20)
+    
 
-    # Location Input
+    # Link Input
+    link_label = customtkinter.CTkLabel(insert, text="Link:")
+    link_label.grid(row=1, column=0, sticky="e", padx=20)
+    
     link_var = tkinter.StringVar()
     link = customtkinter.CTkEntry(
-        insert, placeholder_text="Link", width=350, height=40, textvariable=link_var
+        insert, placeholder_text="Link", height=40, textvariable=link_var
     )
-    link.pack()
+    link.grid(row=1, column=1, columnspan=3, pady=20, padx=20, sticky="ew")
 
     # Daily cost input
+    cost_label = customtkinter.CTkLabel(insert, text="Cost:")
+    cost_label.grid(row=2, column=0, pady=10, sticky="e", padx=20)
+    
     cost_var = tkinter.IntVar()
     cost = customtkinter.CTkEntry(
         insert, placeholder_text="Daily Cost", width=100, height=40, textvariable=cost_var
     )
-    cost.pack()
+    cost.grid(row=2, column=1, padx=20, pady=10, sticky="w")
 
     # Miscellaneous cost input
+    misc_cost_label = customtkinter.CTkLabel(insert, text="Misc Cost:")
+    misc_cost_label.grid(row=2, column=2, pady=10, sticky="e")
+    
     misc_cost_var = tkinter.IntVar()
     misc_cost = customtkinter.CTkEntry(
         insert,
@@ -280,7 +273,7 @@ def new_insert(root: customtkinter.CTk) -> None:
         height=40,
         textvariable=misc_cost_var,
     )
-    misc_cost.pack()
+    misc_cost.grid(row=2, column=3, pady=10, padx=20)
 
     # Button, which when pressed adds an entry to SQLite using Listing.add_listing()
     button_input = customtkinter.CTkButton(
@@ -295,11 +288,9 @@ def new_insert(root: customtkinter.CTk) -> None:
             input_clear(link, cost, misc_cost)
         )
     )
-    button_input.pack(pady=10)
-
-    # Status
-    status = customtkinter.CTkLabel(insert, text="")
-    status.pack(padx=10, pady=10)
+    button_input.grid(row=3, column=1, pady=20, padx=20, sticky="e", columnspan=2)
+    
+    
 
 
 # BUG Not clearing field
@@ -396,7 +387,6 @@ def create_tables(database: str) -> None:
 
     # Creates database connection
     conn = sql_create_connection(database)
-
     # Creates the tables
     if conn is not None:
         sql_create_table(conn, sql_create_main_table)
