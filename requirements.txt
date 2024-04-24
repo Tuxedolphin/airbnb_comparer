@@ -1,0 +1,11 @@
+pip install gobnb
+pip install jsonlib
+pip install tk
+pip install customtkinter
+pip install db-sqlite3
+pip install regex
+pip install wraptext
+pip install requests
+pip install DateTime
+pip install pillow
+pip install Python-IO

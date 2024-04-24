@@ -1,35 +1,35 @@
 {
     "coordinates": {
-        "latitude": 35.53418577989856,
-        "longitude": 138.78001265874812
+        "latitude": 35.7344,
+        "longitude": 139.70496
     },
-    "room_type": "Private room",
+    "room_type": "Entire home/apt",
     "is_super_host": true,
     "home_tier": 1,
-    "person_capacity": 4,
+    "person_capacity": 9,
     "rating": {
-        "accuracy": 4.83,
-        "checking": 4.85,
-        "cleanliness": 4.81,
-        "communication": 4.86,
-        "location": 4.81,
-        "value": 4.69,
-        "guest_satisfaction": 4.88,
-        "review_count": "203"
+        "accuracy": 4.92,
+        "checking": 4.92,
+        "cleanliness": 4.92,
+        "communication": 4.92,
+        "location": 4.83,
+        "value": 4.92,
+        "guest_satisfaction": 4.92,
+        "review_count": "12"
     },
     "house_rules": {
-        "aditional": "Music is prohibited.\nGuests under the age of 12 will not be able to use it for the safety of the location and to create an atmosphere for the safety of the location and the atmosphere of the facility.\n\u00b7 The price is per person. It is not the price of one room.",
+        "aditional": "",
         "general": [
             {
                 "title": "Checking in and out",
                 "values": [
                     {
-                        "title": "Check-in: 3:00 pm \u2013 6:00 pm",
+                        "title": "Check-in after 4:00 pm",
                         "icon": "SYSTEM_CLOCK"
                     },
                     {
-                        "title": "Checkout before 10:00 am",
-                        "icon": "SYSTEM_CLOCK"
+                        "title": "Self check-in with lockbox",
+                        "icon": "SYSTEM_CHECK_IN"
                     }
                 ]
             },
@@ -37,7 +37,7 @@
                 "title": "During your stay",
                 "values": [
                     {
-                        "title": "4 guests maximum",
+                        "title": "9 guests maximum",
                         "icon": "SYSTEM_FAMILY"
                     },
                     {
@@ -49,6 +49,10 @@
                         "icon": "SYSTEM_NO_EVENTS"
                     },
                     {
+                        "title": "No commercial photography",
+                        "icon": "SYSTEM_NO_CAMERA"
+                    },
+                    {
                         "title": "No smoking",
                         "icon": "SYSTEM_SMOKING_NOT_ALLOWED"
                     }
@@ -57,49 +61,38 @@
         ]
     },
     "host": {
-        "id": "470104460",
-        "name": "Hosted by Qoonel+"
+        "id": "321377663",
+        "name": "Hosted by Takeshi"
     },
     "sub_description": {
-        "title": "Private room in dome in Fujikawaguchiko, Minamitsuru District, Japan",
+        "title": "Entire apartment in Toshima City, Japan",
         "items": [
-            "4 guests",
-            "1 bedroom",
+            "9 guests",
+            "3 bedrooms",
             "4 beds",
-            "1.5 bathrooms"
+            "1 bathroom"
         ]
     },
     "amenities": [
         {
-            "title": "Scenic views",
-            "values": [
-                {
-                    "title": "City skyline view",
-                    "subtitle": "",
-                    "icon": "SYSTEM_VIEW_CITY",
-                    "available": true
-                },
-                {
-                    "title": "Lake view",
-                    "subtitle": "",
-                    "icon": "SYSTEM_VIEW_OCEAN",
-                    "available": true
-                },
-                {
-                    "title": "Mountain view",
-                    "subtitle": "",
-                    "icon": "SYSTEM_VIEW_MOUNTAIN",
-                    "available": true
-                }
-            ]
-        },
-        {
             "title": "Bathroom",
             "values": [
+                {
+                    "title": "Bath",
+                    "subtitle": "",
+                    "icon": "SYSTEM_BATHTUB",
+                    "available": true
+                },
                 {
                     "title": "Hair dryer",
                     "subtitle": "",
                     "icon": "SYSTEM_HAIRDRYER",
+                    "available": true
+                },
+                {
+                    "title": "Cleaning products",
+                    "subtitle": "",
+                    "icon": "SYSTEM_CLEANING_SUPPLIES",
                     "available": true
                 },
                 {
@@ -115,15 +108,15 @@
                     "available": true
                 },
                 {
-                    "title": "Body soap",
+                    "title": "Hot water",
                     "subtitle": "",
-                    "icon": "SYSTEM_SOAP",
+                    "icon": "SYSTEM_HOT_WATER",
                     "available": true
                 },
                 {
-                    "title": "Bidet",
+                    "title": "Shower gel",
                     "subtitle": "",
-                    "icon": "SYSTEM_TOILET_BIDET",
+                    "icon": "SYSTEM_SOAP",
                     "available": true
                 }
             ]
@@ -132,15 +125,44 @@
             "title": "Bedroom and laundry",
             "values": [
                 {
+                    "title": "Washing machine",
+                    "subtitle": "",
+                    "icon": "SYSTEM_WASHER",
+                    "available": true
+                },
+                {
                     "title": "Essentials",
                     "subtitle": "Towels, bed sheets, soap and toilet paper",
                     "icon": "SYSTEM_TOILETRIES",
                     "available": true
                 },
                 {
-                    "title": "Bed linen",
+                    "title": "Hangers",
                     "subtitle": "",
+                    "icon": "SYSTEM_HANGERS",
+                    "available": true
+                },
+                {
+                    "title": "Bed linen",
+                    "subtitle": "Cotton linen",
                     "icon": "SYSTEM_BLANKETS",
+                    "available": true
+                },
+                {
+                    "title": "Iron",
+                    "subtitle": "",
+                    "icon": "SYSTEM_IRON",
+                    "available": true
+                }
+            ]
+        },
+        {
+            "title": "Entertainment",
+            "values": [
+                {
+                    "title": "TV",
+                    "subtitle": "",
+                    "icon": "SYSTEM_TV",
                     "available": true
                 }
             ]
@@ -149,13 +171,13 @@
             "title": "Heating and cooling",
             "values": [
                 {
-                    "title": "Indoor fireplace: gas",
+                    "title": "Air conditioning",
                     "subtitle": "",
-                    "icon": "SYSTEM_FIREPLACE",
+                    "icon": "SYSTEM_SNOWFLAKE",
                     "available": true
                 },
                 {
-                    "title": "Heating",
+                    "title": "Heating \u2013 split-type ductless system",
                     "subtitle": "",
                     "icon": "SYSTEM_THERMOMETER",
                     "available": true
@@ -167,7 +189,7 @@
             "values": [
                 {
                     "title": "Exterior security cameras on property",
-                    "subtitle": "\u53d7\u4ed8\u524d\u306b\uff11\u3064\u3001\u99d0\u8eca\u5834\u65b9\u9762\u306b\uff11\u3064\u3054\u3056\u3044\u307e\u3059\u3002",
+                    "subtitle": "\u623f\u6e90\u5916\u90e8\u7684\u516c\u5171\u99ac\u8def\u76e3\u63a7\u651d\u50cf\u982d\uff0c\u5927\u6a13\u5b89\u88dd\u7684\uff0c\u6211\u5011\u7121\u6cd5\u63a7\u5236\u7684\u3002",
                     "icon": "SYSTEM_SURVEILLANCE",
                     "available": true
                 },
@@ -182,11 +204,16 @@
                     "subtitle": "",
                     "icon": "SYSTEM_FIRE_EXTINGUISHER",
                     "available": true
-                },
+                }
+            ]
+        },
+        {
+            "title": "Internet and office",
+            "values": [
                 {
-                    "title": "First aid kit",
+                    "title": "Wifi",
                     "subtitle": "",
-                    "icon": "SYSTEM_FIRST_AID_KIT",
+                    "icon": "SYSTEM_WI_FI",
                     "available": true
                 }
             ]
@@ -201,62 +228,44 @@
                     "available": true
                 },
                 {
+                    "title": "Fridge",
+                    "subtitle": "",
+                    "icon": "SYSTEM_REFRIGERATOR",
+                    "available": true
+                },
+                {
+                    "title": "Microwave",
+                    "subtitle": "",
+                    "icon": "SYSTEM_MICROWAVE",
+                    "available": true
+                },
+                {
+                    "title": "Cooking basics",
+                    "subtitle": "Pots and pans, oil, salt and pepper",
+                    "icon": "SYSTEM_COOKING_BASICS",
+                    "available": true
+                },
+                {
                     "title": "Dishes and cutlery",
                     "subtitle": "Bowls, chopsticks, plates, cups, etc.",
                     "icon": "SYSTEM_DISHES_AND_SILVERWARE",
                     "available": true
                 },
                 {
-                    "title": "Wine glasses",
+                    "title": "Rice cooker",
                     "subtitle": "",
-                    "icon": "SYSTEM_MAPS_BAR",
-                    "available": true
-                },
-                {
-                    "title": "Dining table",
-                    "subtitle": "",
-                    "icon": "SYSTEM_DINING_TABLE",
-                    "available": true
-                },
-                {
-                    "title": "Coffee",
-                    "subtitle": "",
-                    "icon": "SYSTEM_COFFEE_MAKER",
+                    "icon": "SYSTEM_RICE_COOKER",
                     "available": true
                 }
             ]
         },
         {
-            "title": "Outdoor",
+            "title": "Location features",
             "values": [
                 {
-                    "title": "Private patio or balcony",
-                    "subtitle": "",
-                    "icon": "SYSTEM_PATIO_BALCONY",
-                    "available": true
-                },
-                {
-                    "title": "Firepit",
-                    "subtitle": "",
-                    "icon": "SYSTEM_FIREPIT",
-                    "available": true
-                },
-                {
-                    "title": "Outdoor dining area",
-                    "subtitle": "",
-                    "icon": "SYSTEM_ROOFTOP_DECK",
-                    "available": true
-                },
-                {
-                    "title": "Outdoor kitchen",
-                    "subtitle": "",
-                    "icon": "SYSTEM_GRILL",
-                    "available": true
-                },
-                {
-                    "title": "BBQ grill",
-                    "subtitle": "",
-                    "icon": "SYSTEM_GRILL",
+                    "title": "Private entrance",
+                    "subtitle": "Separate street or building entrance",
+                    "icon": "SYSTEM_DOOR",
                     "available": true
                 }
             ]
@@ -265,9 +274,9 @@
             "title": "Parking and facilities",
             "values": [
                 {
-                    "title": "Free parking on premises",
+                    "title": "Private hot tub \u2013 open 24 hours",
                     "subtitle": "",
-                    "icon": "SYSTEM_MAPS_CAR_RENTAL",
+                    "icon": "SYSTEM_JACUZZI",
                     "available": true
                 }
             ]
@@ -276,9 +285,21 @@
             "title": "Services",
             "values": [
                 {
-                    "title": "Host greets you",
+                    "title": "Long-term stays allowed",
+                    "subtitle": "Allow stays of 28 days or more",
+                    "icon": "SYSTEM_CALENDAR",
+                    "available": true
+                },
+                {
+                    "title": "Self check-in",
                     "subtitle": "",
-                    "icon": "SYSTEM_HOST_OWNERS",
+                    "icon": "SYSTEM_KEY",
+                    "available": true
+                },
+                {
+                    "title": "Lockbox",
+                    "subtitle": "",
+                    "icon": "SYSTEM_SAFE",
                     "available": true
                 }
             ]
@@ -287,39 +308,15 @@
             "title": "Not included",
             "values": [
                 {
-                    "title": "Wifi",
+                    "title": "Dryer",
                     "subtitle": "",
-                    "icon": "SYSTEM_OFFLINE",
-                    "available": false
-                },
-                {
-                    "title": "TV",
-                    "subtitle": "",
-                    "icon": "SYSTEM_NO_TV",
-                    "available": false
-                },
-                {
-                    "title": "Washing machine",
-                    "subtitle": "",
-                    "icon": "SYSTEM_NO_WASHER",
-                    "available": false
-                },
-                {
-                    "title": "Air conditioning",
-                    "subtitle": "",
-                    "icon": "SYSTEM_NO_AIR_CONDITIONING",
+                    "icon": "SYSTEM_NO_DRYER",
                     "available": false
                 },
                 {
                     "title": "Carbon monoxide alarm",
-                    "subtitle": "There is no carbon monoxide detector on the property.",
+                    "subtitle": "This place may not have a carbon monoxide detector. Contact the host with any questions.",
                     "icon": "SYSTEM_NO_DETECTOR_CO2",
-                    "available": false
-                },
-                {
-                    "title": "Private entrance",
-                    "subtitle": "",
-                    "icon": "SYSTEM_NO_PRIVATE_ENTRANCE",
                     "available": false
                 }
             ]
@@ -329,97 +326,133 @@
     "images": [
         {
             "title": "Listing image 1",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-673527145540658319/original/fe30e34a-b711-42de-8121-507e0b4b021b.jpeg"
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/2539b13d-7e96-4589-8597-0a76d4dc05a1.jpeg"
         },
         {
             "title": "Listing image 2",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-673527145540658319/original/32140be1-c44c-4100-afde-bf4f312a7d8d.jpeg"
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/358ce811-695b-4bb9-bb9d-0995fb2a263b.jpeg"
         },
         {
             "title": "Listing image 3",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-673527145540658319/original/45dc7e10-83f3-479a-8e3c-a8b875c06985.jpeg"
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/f04c9de7-bc82-4617-9675-ec1cca8d0192.jpeg"
         },
         {
             "title": "Listing image 4",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-673527145540658319/original/d8d6979f-ddea-499e-aa5c-7f9b7ca37f02.jpeg"
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/253772f5-37b0-4ee3-ba2b-0e72da9bb9fc.jpeg"
         },
         {
             "title": "Listing image 5",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-673527145540658319/original/67c84a88-611b-47e4-962d-d5a34c820910.jpeg"
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/df831149-65c6-4926-80a2-06f0b8bb01a8.jpeg"
         },
         {
             "title": "Listing image 6",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-673527145540658319/original/d0843a36-8770-4836-a077-37e382bbfed1.jpeg"
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/b00523ec-48fe-419b-a1a7-245325e812a6.jpeg"
         },
         {
             "title": "Listing image 7",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-673527145540658319/original/3c1f075b-167e-4ba6-8234-27267de7a7e1.jpeg"
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/e60984a8-94e5-42d1-8c34-a2652f005031.jpeg"
         },
         {
             "title": "Listing image 8",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-673527145540658319/original/2b65d5c6-2bad-49de-958e-237b31f3c2e5.jpeg"
+            "url": "https://a0.muscache.com/im/pictures/aca8753f-01b7-4558-8aa4-4bb7a57ee527.jpg"
         },
         {
             "title": "Listing image 9",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-673527145540658319/original/989691bd-d3d1-4f96-894d-6e982fe12cb6.jpeg"
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/cd0f55f7-c216-4d9f-b1ef-ce1d812f2c68.jpeg"
         },
         {
             "title": "Listing image 10",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-673527145540658319/original/eb341abf-3351-4685-a79a-e16be9764146.jpeg"
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/336fa8b8-dd7e-4879-9058-9f427988aecb.jpeg"
         },
         {
             "title": "Listing image 11",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-673527145540658319/original/ceb865a8-4556-45b0-bc0a-3e19687af9cd.jpeg"
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/ea481f32-2189-4411-af2b-a302e4c13731.jpeg"
         },
         {
             "title": "Listing image 12",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-673527145540658319/original/64de7514-7fa5-4e8e-9429-1584439f16c8.jpeg"
+            "url": "https://a0.muscache.com/im/pictures/c34d2f02-d2ab-4601-9567-45c81de7b668.jpg"
         },
         {
             "title": "Listing image 13",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-673527145540658319/original/6503fa5a-c656-4193-8e14-db2238ac7da7.jpeg"
+            "url": "https://a0.muscache.com/im/pictures/c988bc1a-e921-4736-9e7f-63f0d53c104e.jpg"
         },
         {
             "title": "Listing image 14",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-673527145540658319/original/cc5fcbd7-5aae-4ceb-98d4-5ed60f791101.jpeg"
+            "url": "https://a0.muscache.com/im/pictures/7565beef-7424-4bf0-b48b-e5530c806735.jpg"
         },
         {
             "title": "Listing image 15",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-673527145540658319/original/e8b939bb-841a-4d12-aa2e-08cc28fb29af.jpeg"
+            "url": "https://a0.muscache.com/im/pictures/94519867-273b-4c38-bb25-c33ee8230dcd.jpg"
         },
         {
             "title": "Listing image 16",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-673527145540658319/original/58d3d087-41c9-4377-b159-03b825a244e0.jpeg"
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/28009939-0739-45db-8ca7-22440fb3cf09.jpeg"
+        },
+        {
+            "title": "Listing image 17",
+            "url": "https://a0.muscache.com/im/pictures/a7f31492-e616-46b1-8890-945776ce3d7c.jpg"
+        },
+        {
+            "title": "Listing image 18",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/8c1d10ec-4a78-4e86-9d82-bab4b39fc907.jpeg"
+        },
+        {
+            "title": "Listing image 19",
+            "url": "https://a0.muscache.com/im/pictures/2d914ae9-a57a-4dc0-993a-ff5705d22eaf.jpg"
+        },
+        {
+            "title": "Listing image 20",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-41277123/original/15eced4b-5701-480d-bfad-d30748e96971.jpeg"
+        },
+        {
+            "title": "Listing image 21",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-41277123/original/414711a7-4f38-4e70-a61e-cef7f87477b9.jpeg"
+        },
+        {
+            "title": "Listing image 22",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-41277123/original/fbc48ad3-2b54-4914-adc1-33312ee86f58.jpeg"
+        },
+        {
+            "title": "Listing image 23",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/31ef2901-7f9c-490b-a0b9-a2c7510888a1.jpeg"
+        },
+        {
+            "title": "Listing image 24",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/ea09a928-9099-499a-a88a-4e073a55cd53.jpeg"
+        },
+        {
+            "title": "Listing image 25",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/281b17dd-fc67-4457-ae43-eae1e0519bf6.jpeg"
         }
     ],
     "location_descriptions": [
         {
-            "title": "Fujikawaguchiko, Minamitsuru District, Yamanashi, Japan",
-            "content": "Our facility is located in a mountainous area.Within a 5-minute walk from the hotel, there is a \"Tenku no Torii\" where you can take photos of Mt. Fuji inside the torii, and a sacred waterfall \"Mother Shirakaki\".Instead of getting away from the hustle and bustle of the town, it takes a 30-minute walk down the hill to the nearby convenience store.We recommend that you prepare and check in with ingredients and drinks."
+            "title": "Toshima City, Tokyo, Japan",
+            "content": "East side of Ikebukuro has a lot of electro shops and shopping malls. One famous Sunshine is so popular. It has everything. you might need to go for the last minute shopping.<br /><br />There is very important as well, it's called Gokoku temple. Popular tourist spot but also famous for Sakura blossoms.<br /><br />J World Tokyo is one of the most exciting spot in Ikebukuro area, You can be famous characters from very popular comics! Super popular, must go!"
         },
         {
             "title": "Getting around",
-            "content": "Parking is a 2-3 minute walk.If you have a lot of luggage, we will lend you a cart."
+            "content": "From the Ikebukuro station to popular places<br /><br />Tokyo \u30fc 17min<br />Ueno \u30fc 17min<br />Tsukiji \u30fc 27min<br />Asakusa \u30fc 25min<br />Shinjuku \u30fc 8min<br />Harajuku \u30fc 12min<br />Ginza \u30fc 19min<br />Roppongi \u2013 17min <br />Shibuya \u30fc 15min<br />Tokyo Disney Land \u2013 43min<br /> <br /> <br />Haneda Airport \u30fc 45min <br />Narita Airport \u30fc 48min"
         }
     ],
     "highlights": [
         {
-            "title": "Free cancellation before 21 Jun",
-            "subtitle": "Get a full refund if you change your mind.",
-            "icon": "SYSTEM_CALENDAR"
+            "title": "Self check-in",
+            "subtitle": "Check yourself in with the lockbox.",
+            "icon": "SYSTEM_CHECK_IN"
         },
         {
-            "title": "Park for free",
-            "subtitle": "This is one of the few places in the area with free parking.",
-            "icon": "SYSTEM_PARKING"
-        },
-        {
-            "title": "Qoonel+ is a Superhost",
+            "title": "Takeshi is a Superhost",
             "subtitle": "Superhosts are experienced, highly rated Hosts.",
             "icon": "SYSTEM_SUPERHOST"
+        },
+        {
+            "title": "Free cancellation before 2 May",
+            "subtitle": "Get a full refund if you change your mind.",
+            "icon": "SYSTEM_CALENDAR"
         }
     ],
-    "description": "You can enjoy the natural scenery and sound of each season with five senses at an altitude of 1100 meters.<br />Please spend a relaxing time with your loved ones.<br /><br />Check-in 3:00 pm - 6:00 pm<br />(Self check-in will be after that.)<br />Check-out by 10am<br /><br />1. This plan is without meals.<br />There is no meal, so please bring food and drinks.Food and drinks are not sold at the front desk.The nearest supermarket is 15 minutes' drive away.<br />2. Dinner (BBQspecialfoods) and breakfast (Hotsandwich&Coffee) can be booked if you would like to eat.Available up to 5 days in advance.<br />3. We provide pick-up service from Kawaguchiko Station only during check-in and check-out.<br />4. Children and pets under the age of 12 cannot be searched, including children, due to the safety of the location and the atmosphere of the facility.<br /><br />Some days the weather is not good.Please make a reservation after understanding.<br /><br />In addition, the accommodation fee at QOONEL + is not rented out in one building, but will be charged for each person.<br />Please take care when booking.<br /><br /><b>The space</b><br />Private bedroom, kitchen, toilet, dining space, bonfire space, kitchen tool set, parking lot are available.<br /><br />There is a\u2605 private room shower room, but it will be shared.<br /><br /><b>Other things to note</b><br />Meal booking (at least 5 days in advance) 10,450 yen per person<br />- Dinner-Special<br />BBQ foods & Water (Please bring no alcohol)<br />Breakfast - Hotsandwich<br />& Oganic coffee<br /><br />Transfer service reservation (reservation up to 3 days in advance) Free<br />Welcome to Kawaguchiko Station<br />\u2460 3:30 pm \u2461 4:30 pm<br />Kawaguchiko Station<br />10:00 AM Departure<br /><br />There is no taxi service during your stay, so the best option is a private car or rental car.<br /><br /><b>Registration number</b><br />Hotels and Inns Business Act | \u5c71\u68a8\u770c | \u5c71\u68a8\u770c\u6307\u4ee4 \u5bcc\u6771\u798f\u7b2c 4824 \u53f7",
+    "description": "You can use my WHOLE HOUSE!<br /><br />It can accommodate max 9ppl so good to stay with your family and friends!<br /><br />My home is only 400 meters away from the nearest exit of the JR Ikebukuro Station .that is super easy to go everywhere in Tokyo such as Shinjuku,Shibuya,Ueno,etc.<br />Many other JR and Metro lines are in the station.<br />Ikebukuro is the place great to walk around too! Ramen is must too!<br />Basic kitchen utensils as well as wifi and amenities are free to use. <br />Come and stay with your family and friends!<br /><br /><b>The space</b><br />\u3010Space\u3011<br />-- Entirely rented<br />-- 3Rooms<br />-- Kitchen Space<br />-- Toilet<br />-- Shower<br /><br /><br />------Beds-\u2014-- <br />Sleeping Area<br />1 Double Sized Beds<br />1 Single Beds<br />3 Single Futons<br />2 Sofa Bed<br /><br />\u2014\u2014\u2014Living room ------<br /><br />1 TV<br />4 Air conditioner<br /><br />\u2605KITCHEN AMENITIES\u2605<br />-- Microwave<br />-- Refrigerator<br />-- Electric Kettle<br />-- Knife, Cutting Board, Spatula<br />-- Frying Pan, Saucepan<br />-- Stove<br />-- Plates, Mug Cups, Glasses<br />-- Cutlery, Chopsticks<br />-- Dish Washing Liquid<br /><br />\u2605EQUIPMENT / AMENITIES\u2605<br />-- Television<br />-- Air Conditioning<br />-- Washing Machine<br />-- Laundry Detergent/ Fabric Softener<br />-- Hangers<br />-- Iron and Ironing Board<br />-- Trash Bins<br />-- First Aid Kit<br />-- WiFi<br /><br />\u2605BATHROOM/SHOWER\u2605<br />-- Bathtub and Shower<br />-- Toilet<br />-- Shampoo, Conditioner, Body Soap<br />-- Face Towel, Bath Towel<br />-- Tissues, Toilet Paper<br />-- Hair Dryer<br /><br />\u2605CLEANING\u2605<br />-- Vacuum<br /><br />\u2605 FAQ \u2605 <br />(1) Check-in and check-out time?<br />You can check-in at any time after 16:00. You can check out any time before 11:00. Early check-in and late check-out are not allowed.<br /><br />(2) When can we stay?<br />Calendar is always up-to-date. Minimum stay is two night. <br /><br />(3) How much are children.<br />2 years old and under are free. There is no available beds for children.<br /><br /><b>Guest access</b><br />The room is just for you so you can enter and leave anytime you want. <br />\u203bPlease be respectful about noise to my neighbors though.<br /><br /><b>Other things to note</b><br />We do not provide toothbrushes, please bring your own. Thank you.<br /><br /><b>Registration number</b><br />M130035559",
     "title": "",
     "language": "en",
     "price": {
