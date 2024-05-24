@@ -1,30 +1,34 @@
 {
     "coordinates": {
-        "latitude": 35.7344,
-        "longitude": 139.70496
+        "latitude": 42.85734,
+        "longitude": 140.70967
     },
     "room_type": "Entire home/apt",
-    "is_super_host": true,
+    "is_super_host": false,
     "home_tier": 1,
-    "person_capacity": 9,
+    "person_capacity": 6,
     "rating": {
-        "accuracy": 4.92,
-        "checking": 4.92,
-        "cleanliness": 4.92,
-        "communication": 4.92,
-        "location": 4.83,
-        "value": 4.92,
-        "guest_satisfaction": 4.92,
-        "review_count": "12"
+        "accuracy": 4.85,
+        "checking": 4.88,
+        "cleanliness": 4.77,
+        "communication": 4.7,
+        "location": 4.66,
+        "value": 4.54,
+        "guest_satisfaction": 4.71,
+        "review_count": "138"
     },
     "house_rules": {
-        "aditional": "",
+        "aditional": "* ABSOLUTELY NO SMOKING.\n* No pets (sorry).\n* Please respect the premises as you'll want to find it in pristine condition next season.",
         "general": [
             {
                 "title": "Checking in and out",
                 "values": [
                     {
                         "title": "Check-in after 4:00 pm",
+                        "icon": "SYSTEM_CLOCK"
+                    },
+                    {
+                        "title": "Checkout before 10:00 am",
                         "icon": "SYSTEM_CLOCK"
                     },
                     {
@@ -37,7 +41,7 @@
                 "title": "During your stay",
                 "values": [
                     {
-                        "title": "9 guests maximum",
+                        "title": "6 guests maximum",
                         "icon": "SYSTEM_FAMILY"
                     },
                     {
@@ -49,10 +53,6 @@
                         "icon": "SYSTEM_NO_EVENTS"
                     },
                     {
-                        "title": "No commercial photography",
-                        "icon": "SYSTEM_NO_CAMERA"
-                    },
-                    {
                         "title": "No smoking",
                         "icon": "SYSTEM_SMOKING_NOT_ALLOWED"
                     }
@@ -61,16 +61,16 @@
         ]
     },
     "host": {
-        "id": "321377663",
-        "name": "Hosted by Takeshi"
+        "id": "18025538",
+        "name": "Hosted by Concierge"
     },
     "sub_description": {
-        "title": "Entire apartment in Toshima City, Japan",
+        "title": "Entire chalet in \u867b\u7530\u90e1, Japan",
         "items": [
-            "9 guests",
+            "6 guests",
             "3 bedrooms",
-            "4 beds",
-            "1 bathroom"
+            "3 beds",
+            "2 bathrooms"
         ]
     },
     "amenities": [
@@ -90,12 +90,6 @@
                     "available": true
                 },
                 {
-                    "title": "Cleaning products",
-                    "subtitle": "",
-                    "icon": "SYSTEM_CLEANING_SUPPLIES",
-                    "available": true
-                },
-                {
                     "title": "Shampoo",
                     "subtitle": "",
                     "icon": "SYSTEM_SHAMPOO",
@@ -105,6 +99,12 @@
                     "title": "Conditioner",
                     "subtitle": "",
                     "icon": "SYSTEM_SHAMPOO",
+                    "available": true
+                },
+                {
+                    "title": "Body soap",
+                    "subtitle": "",
+                    "icon": "SYSTEM_SOAP",
                     "available": true
                 },
                 {
@@ -124,12 +124,6 @@
         {
             "title": "Bedroom and laundry",
             "values": [
-                {
-                    "title": "Washing machine",
-                    "subtitle": "",
-                    "icon": "SYSTEM_WASHER",
-                    "available": true
-                },
                 {
                     "title": "Essentials",
                     "subtitle": "Towels, bed sheets, soap and toilet paper",
@@ -153,6 +147,18 @@
                     "subtitle": "",
                     "icon": "SYSTEM_IRON",
                     "available": true
+                },
+                {
+                    "title": "Clothes drying rack",
+                    "subtitle": "",
+                    "icon": "SYSTEM_HANGERS",
+                    "available": true
+                },
+                {
+                    "title": "Clothes storage: wardrobe",
+                    "subtitle": "",
+                    "icon": "SYSTEM_WARDROBE",
+                    "available": true
                 }
             ]
         },
@@ -160,9 +166,32 @@
             "title": "Entertainment",
             "values": [
                 {
-                    "title": "TV",
+                    "title": "TV with standard cable/satellite",
                     "subtitle": "",
                     "icon": "SYSTEM_TV",
+                    "available": true
+                },
+                {
+                    "title": "Bluetooth sound system",
+                    "subtitle": "",
+                    "icon": "SYSTEM_SPEAKERS",
+                    "available": true
+                }
+            ]
+        },
+        {
+            "title": "Family",
+            "values": [
+                {
+                    "title": "Window guards",
+                    "subtitle": "",
+                    "icon": "SYSTEM_WINDOW_GUARD",
+                    "available": true
+                },
+                {
+                    "title": "Babysitter recommendations",
+                    "subtitle": "",
+                    "icon": "SYSTEM_CHILD",
                     "available": true
                 }
             ]
@@ -171,13 +200,19 @@
             "title": "Heating and cooling",
             "values": [
                 {
-                    "title": "Air conditioning",
+                    "title": "Indoor fireplace",
                     "subtitle": "",
-                    "icon": "SYSTEM_SNOWFLAKE",
+                    "icon": "SYSTEM_FIREPLACE",
                     "available": true
                 },
                 {
-                    "title": "Heating \u2013 split-type ductless system",
+                    "title": "Portable fans",
+                    "subtitle": "",
+                    "icon": "SYSTEM_FAN_PORTABLE",
+                    "available": true
+                },
+                {
+                    "title": "Heating",
                     "subtitle": "",
                     "icon": "SYSTEM_THERMOMETER",
                     "available": true
@@ -187,12 +222,6 @@
         {
             "title": "Home safety",
             "values": [
-                {
-                    "title": "Exterior security cameras on property",
-                    "subtitle": "\u623f\u6e90\u5916\u90e8\u7684\u516c\u5171\u99ac\u8def\u76e3\u63a7\u651d\u50cf\u982d\uff0c\u5927\u6a13\u5b89\u88dd\u7684\uff0c\u6211\u5011\u7121\u6cd5\u63a7\u5236\u7684\u3002",
-                    "icon": "SYSTEM_SURVEILLANCE",
-                    "available": true
-                },
                 {
                     "title": "Smoke alarm",
                     "subtitle": "",
@@ -214,6 +243,12 @@
                     "title": "Wifi",
                     "subtitle": "",
                     "icon": "SYSTEM_WI_FI",
+                    "available": true
+                },
+                {
+                    "title": "Dedicated workspace",
+                    "subtitle": "In a common space",
+                    "icon": "SYSTEM_WORKSPACE",
                     "available": true
                 }
             ]
@@ -252,9 +287,57 @@
                     "available": true
                 },
                 {
+                    "title": "Freezer",
+                    "subtitle": "",
+                    "icon": "SYSTEM_REFRIGERATOR",
+                    "available": true
+                },
+                {
+                    "title": "Cooker",
+                    "subtitle": "",
+                    "icon": "SYSTEM_STOVE",
+                    "available": true
+                },
+                {
+                    "title": "Oven",
+                    "subtitle": "",
+                    "icon": "SYSTEM_OVEN",
+                    "available": true
+                },
+                {
+                    "title": "Kettle",
+                    "subtitle": "",
+                    "icon": "SYSTEM_WATER_KETTLE",
+                    "available": true
+                },
+                {
+                    "title": "Coffee maker: cafeti\u00e8re",
+                    "subtitle": "",
+                    "icon": "SYSTEM_COFFEE_MAKER",
+                    "available": true
+                },
+                {
+                    "title": "Wine glasses",
+                    "subtitle": "",
+                    "icon": "SYSTEM_MAPS_BAR",
+                    "available": true
+                },
+                {
+                    "title": "Toaster",
+                    "subtitle": "",
+                    "icon": "SYSTEM_TOASTER",
+                    "available": true
+                },
+                {
                     "title": "Rice cooker",
                     "subtitle": "",
                     "icon": "SYSTEM_RICE_COOKER",
+                    "available": true
+                },
+                {
+                    "title": "Dining table",
+                    "subtitle": "",
+                    "icon": "SYSTEM_DINING_TABLE",
                     "available": true
                 }
             ]
@@ -262,6 +345,12 @@
         {
             "title": "Location features",
             "values": [
+                {
+                    "title": "Ski-in/ski-out \u2013 on a free shuttle line",
+                    "subtitle": "Guests can access ski lifts without driving or taking paid transport",
+                    "icon": "SYSTEM_SKI",
+                    "available": true
+                },
                 {
                     "title": "Private entrance",
                     "subtitle": "Separate street or building entrance",
@@ -274,9 +363,15 @@
             "title": "Parking and facilities",
             "values": [
                 {
-                    "title": "Private hot tub \u2013 open 24 hours",
+                    "title": "Free parking on premises",
                     "subtitle": "",
-                    "icon": "SYSTEM_JACUZZI",
+                    "icon": "SYSTEM_MAPS_CAR_RENTAL",
+                    "available": true
+                },
+                {
+                    "title": "Free on-street parking",
+                    "subtitle": "",
+                    "icon": "SYSTEM_MAPS_CAR_RENTAL",
                     "available": true
                 }
             ]
@@ -308,14 +403,32 @@
             "title": "Not included",
             "values": [
                 {
+                    "title": "Exterior security cameras on property",
+                    "subtitle": null,
+                    "icon": "SYSTEM_NO_SURVEILLANCE",
+                    "available": false
+                },
+                {
+                    "title": "Washing machine",
+                    "subtitle": "",
+                    "icon": "SYSTEM_NO_WASHER",
+                    "available": false
+                },
+                {
                     "title": "Dryer",
                     "subtitle": "",
                     "icon": "SYSTEM_NO_DRYER",
                     "available": false
                 },
                 {
+                    "title": "Air conditioning",
+                    "subtitle": "",
+                    "icon": "SYSTEM_NO_AIR_CONDITIONING",
+                    "available": false
+                },
+                {
                     "title": "Carbon monoxide alarm",
-                    "subtitle": "This place may not have a carbon monoxide detector. Contact the host with any questions.",
+                    "subtitle": "Host has indicated that no carbon monoxide detector is necessary. Contact the host with any questions.",
                     "icon": "SYSTEM_NO_DETECTOR_CO2",
                     "available": false
                 }
@@ -325,134 +438,142 @@
     "co_hosts": [],
     "images": [
         {
-            "title": "Listing image 1",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/2539b13d-7e96-4589-8597-0a76d4dc05a1.jpeg"
+            "title": "Enjoy the lovely Snow Monkey 1, where you will find everything you need for the best experience imaginable",
+            "url": "https://a0.muscache.com/im/pictures/66343410/f540a92e_original.jpg"
         },
         {
-            "title": "Listing image 2",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/358ce811-695b-4bb9-bb9d-0995fb2a263b.jpeg"
+            "title": "Gather 'round in the living room and enjoy unforgettable moments with your friends and family.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-3578641/original/5a0175f3-e86d-4569-aef3-736f2c9d85be.jpeg"
         },
         {
-            "title": "Listing image 3",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/f04c9de7-bc82-4617-9675-ec1cca8d0192.jpeg"
+            "title": "Find your place on the comfy living room sofa.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-3578641/original/0d976625-1e32-4a9c-b809-8819e94f51ea.jpeg"
         },
         {
-            "title": "Listing image 4",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/253772f5-37b0-4ee3-ba2b-0e72da9bb9fc.jpeg"
+            "title": "The open-concept design living area allows you to change your settings quickly without missing a moment of fun.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-3578641/original/059dd767-1713-43b3-8809-06df52ed4d94.jpeg"
         },
         {
-            "title": "Listing image 5",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/df831149-65c6-4926-80a2-06f0b8bb01a8.jpeg"
+            "title": "Cuddle up next to the intimate fireplace.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-3578641/original/57e56209-0c79-41ae-9ba9-50f97458a727.jpeg"
         },
         {
-            "title": "Listing image 6",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/b00523ec-48fe-419b-a1a7-245325e812a6.jpeg"
+            "title": "Serve your delicious meals easily at the lovely dining table.",
+            "url": "https://a0.muscache.com/im/pictures/66331345/775ee7b4_original.jpg"
         },
         {
-            "title": "Listing image 7",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/e60984a8-94e5-42d1-8c34-a2652f005031.jpeg"
+            "title": "Prepare your favorite meals in the spacious, fully equipped kitchen.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-3578641/original/4bd7da2d-0f9c-4cc1-9e67-37fefc863cc6.jpeg"
         },
         {
-            "title": "Listing image 8",
-            "url": "https://a0.muscache.com/im/pictures/aca8753f-01b7-4558-8aa4-4bb7a57ee527.jpg"
+            "title": "Feel free to help yourself with anything you see in the kitchen.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-3578641/original/e71c6b02-d2d9-4d82-8aba-902ab2f33e26.jpeg"
         },
         {
-            "title": "Listing image 9",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/cd0f55f7-c216-4d9f-b1ef-ce1d812f2c68.jpeg"
+            "title": "The lower-floor powder room is accessible from the hallway.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-3578641/original/0eda26b1-2224-46c7-b434-4aeaca06ff6e.jpeg"
         },
         {
-            "title": "Listing image 10",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/336fa8b8-dd7e-4879-9058-9f427988aecb.jpeg"
+            "title": "Sleep like a royal family member on the queen-size bed in the master bedroom.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-3578641/original/75748c83-0000-45ce-afcc-ae64237e8d6f.jpeg"
         },
         {
-            "title": "Listing image 11",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/ea481f32-2189-4411-af2b-a302e4c13731.jpeg"
+            "title": "Keep your clothes clean and wrinkle-free in the spacious wardrobe with hangers and shelves.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-3578641/original/48b7860f-2b28-41fe-98ad-8a28836e05f3.jpeg"
         },
         {
-            "title": "Listing image 12",
-            "url": "https://a0.muscache.com/im/pictures/c34d2f02-d2ab-4601-9567-45c81de7b668.jpg"
+            "title": "Enjoy the convenience of having an ensuite bath.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-3578641/original/8f534f3c-de7a-498e-b2e1-b89d3dba0d6a.jpeg"
         },
         {
-            "title": "Listing image 13",
-            "url": "https://a0.muscache.com/im/pictures/c988bc1a-e921-4736-9e7f-63f0d53c104e.jpg"
+            "title": "Pamper yourself in the tub overlooking the bedroom.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-3578641/original/ccec5545-d0a7-4207-b3c6-278bfd14da7e.jpeg"
         },
         {
-            "title": "Listing image 14",
-            "url": "https://a0.muscache.com/im/pictures/7565beef-7424-4bf0-b48b-e5530c806735.jpg"
+            "title": "Comfortable, plushy mattress in the guest bedroom will have you sleeping on clouds.",
+            "url": "https://a0.muscache.com/im/pictures/66331877/2445fbbf_original.jpg"
         },
         {
-            "title": "Listing image 15",
-            "url": "https://a0.muscache.com/im/pictures/94519867-273b-4c38-bb25-c33ee8230dcd.jpg"
+            "title": "The muted palette and open-plan design imparts a light, Zen atmosphere for all to feel at home.",
+            "url": "https://a0.muscache.com/im/pictures/66331901/22fcd58c_original.jpg"
         },
         {
-            "title": "Listing image 16",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/28009939-0739-45db-8ca7-22440fb3cf09.jpeg"
+            "title": "Wash your troubles away in the lovely guest bathroom.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-3578641/original/c7595ea2-8bf4-4120-870a-775f8c7c574f.jpeg"
         },
         {
-            "title": "Listing image 17",
-            "url": "https://a0.muscache.com/im/pictures/a7f31492-e616-46b1-8890-945776ce3d7c.jpg"
+            "title": "The three bedrooms accommodate all guests comfortably with parallel attention to detail.",
+            "url": "https://a0.muscache.com/im/pictures/66331929/4f83fc34_original.jpg"
         },
         {
-            "title": "Listing image 18",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/8c1d10ec-4a78-4e86-9d82-bab4b39fc907.jpeg"
+            "title": "Resort-like comforts wait for you in all three bedrooms.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-3578641/original/6d6d5251-d301-4b8d-88fe-d0d647e59508.jpeg"
         },
         {
-            "title": "Listing image 19",
-            "url": "https://a0.muscache.com/im/pictures/2d914ae9-a57a-4dc0-993a-ff5705d22eaf.jpg"
+            "title": "Store your gear in the heated ski locker room.",
+            "url": "https://a0.muscache.com/im/pictures/66331968/9cda12c6_original.jpg"
         },
         {
-            "title": "Listing image 20",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-41277123/original/15eced4b-5701-480d-bfad-d30748e96971.jpeg"
+            "title": "You'll be mesmerized by the beautiful views of Mount Yotei.",
+            "url": "https://a0.muscache.com/im/pictures/66332797/baeb1b3c_original.jpg"
         },
         {
-            "title": "Listing image 21",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-41277123/original/414711a7-4f38-4e70-a61e-cef7f87477b9.jpeg"
+            "title": "We are situated directly on the green shuttle bus line.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-3578641/original/212327f3-10b7-45df-af9a-7fbb5bb4e646.png"
         },
         {
-            "title": "Listing image 22",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-41277123/original/fbc48ad3-2b54-4914-adc1-33312ee86f58.jpeg"
+            "title": "The Niseko mountain biking scene is growing in popularity over recent years with the addition of two lift access courses in Hirafu; a 3km downhill course.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-3578641/original/4bdfda3d-c0f2-413b-9e05-4fad48fbca27.jpeg"
         },
         {
-            "title": "Listing image 23",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/31ef2901-7f9c-490b-a0b9-a2c7510888a1.jpeg"
+            "title": "Floorplan lower floor",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-3578641/original/83c95ac2-2a25-4768-96da-adefdc9122b7.jpeg"
         },
         {
-            "title": "Listing image 24",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/ea09a928-9099-499a-a88a-4e073a55cd53.jpeg"
+            "title": "Floorplan higher floor",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-3578641/original/254d71ad-ce44-4fd9-8c56-e03d6cec19fa.jpeg"
         },
         {
-            "title": "Listing image 25",
-            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-993066551069881118/original/281b17dd-fc67-4457-ae43-eae1e0519bf6.jpeg"
+            "title": "Starting in the NAC Mountain Gear Shop the wall stretches up through the second floor JoJos restaurant.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-3578641/original/ccac4660-568f-4658-8b89-452f777b9452.jpeg"
+        },
+        {
+            "title": "Shiribetsu River is one of the cleanest in Japan and offers 7km of white water rapids as well as some gentle stretches for thrill-seekers of all abilities.",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-3578641/original/ce76d01b-ed39-407e-9731-1e5f9128e5f9.jpeg"
+        },
+        {
+            "title": "Resort golf at its best, this par 73, 18 holes and 6,845 yard course is suited to all levels of golfers.\n",
+            "url": "https://a0.muscache.com/im/pictures/miso/Hosting-3578641/original/a1341cac-124c-4122-b34b-e491067c1e35.jpeg"
         }
     ],
     "location_descriptions": [
         {
-            "title": "Toshima City, Tokyo, Japan",
-            "content": "East side of Ikebukuro has a lot of electro shops and shopping malls. One famous Sunshine is so popular. It has everything. you might need to go for the last minute shopping.<br /><br />There is very important as well, it's called Gokoku temple. Popular tourist spot but also famous for Sakura blossoms.<br /><br />J World Tokyo is one of the most exciting spot in Ikebukuro area, You can be famous characters from very popular comics! Super popular, must go!"
+            "title": "\u867b\u7530\u90e1, \u5317\u6d77\u9053, Japan",
+            "content": "There is only one place to stay to fully appreciate Niseko: Hirafu Village! You will be within walking distance to the ski lifts and all notable restaurants & bars. Have we mentioned that the local hot-spring is just steps away?"
         },
         {
             "title": "Getting around",
-            "content": "From the Ikebukuro station to popular places<br /><br />Tokyo \u30fc 17min<br />Ueno \u30fc 17min<br />Tsukiji \u30fc 27min<br />Asakusa \u30fc 25min<br />Shinjuku \u30fc 8min<br />Harajuku \u30fc 12min<br />Ginza \u30fc 19min<br />Roppongi \u2013 17min <br />Shibuya \u30fc 15min<br />Tokyo Disney Land \u2013 43min<br /> <br /> <br />Haneda Airport \u30fc 45min <br />Narita Airport \u30fc 48min"
+            "content": "You can walk to almost any place you need, but for frigid days, you'll have the free shuttle stopping meters away from the lodge."
         }
     ],
     "highlights": [
+        {
+            "title": "Dedicated workspace",
+            "subtitle": "A common area with wifi that\u2019s well suited for working.",
+            "icon": "SYSTEM_WORKSPACE"
+        },
         {
             "title": "Self check-in",
             "subtitle": "Check yourself in with the lockbox.",
             "icon": "SYSTEM_CHECK_IN"
         },
         {
-            "title": "Takeshi is a Superhost",
-            "subtitle": "Superhosts are experienced, highly rated Hosts.",
-            "icon": "SYSTEM_SUPERHOST"
-        },
-        {
-            "title": "Free cancellation before 2 May",
+            "title": "Free cancellation for 48 hours",
             "subtitle": "Get a full refund if you change your mind.",
             "icon": "SYSTEM_CALENDAR"
         }
     ],
-    "description": "You can use my WHOLE HOUSE!<br /><br />It can accommodate max 9ppl so good to stay with your family and friends!<br /><br />My home is only 400 meters away from the nearest exit of the JR Ikebukuro Station .that is super easy to go everywhere in Tokyo such as Shinjuku,Shibuya,Ueno,etc.<br />Many other JR and Metro lines are in the station.<br />Ikebukuro is the place great to walk around too! Ramen is must too!<br />Basic kitchen utensils as well as wifi and amenities are free to use. <br />Come and stay with your family and friends!<br /><br /><b>The space</b><br />\u3010Space\u3011<br />-- Entirely rented<br />-- 3Rooms<br />-- Kitchen Space<br />-- Toilet<br />-- Shower<br /><br /><br />------Beds-\u2014-- <br />Sleeping Area<br />1 Double Sized Beds<br />1 Single Beds<br />3 Single Futons<br />2 Sofa Bed<br /><br />\u2014\u2014\u2014Living room ------<br /><br />1 TV<br />4 Air conditioner<br /><br />\u2605KITCHEN AMENITIES\u2605<br />-- Microwave<br />-- Refrigerator<br />-- Electric Kettle<br />-- Knife, Cutting Board, Spatula<br />-- Frying Pan, Saucepan<br />-- Stove<br />-- Plates, Mug Cups, Glasses<br />-- Cutlery, Chopsticks<br />-- Dish Washing Liquid<br /><br />\u2605EQUIPMENT / AMENITIES\u2605<br />-- Television<br />-- Air Conditioning<br />-- Washing Machine<br />-- Laundry Detergent/ Fabric Softener<br />-- Hangers<br />-- Iron and Ironing Board<br />-- Trash Bins<br />-- First Aid Kit<br />-- WiFi<br /><br />\u2605BATHROOM/SHOWER\u2605<br />-- Bathtub and Shower<br />-- Toilet<br />-- Shampoo, Conditioner, Body Soap<br />-- Face Towel, Bath Towel<br />-- Tissues, Toilet Paper<br />-- Hair Dryer<br /><br />\u2605CLEANING\u2605<br />-- Vacuum<br /><br />\u2605 FAQ \u2605 <br />(1) Check-in and check-out time?<br />You can check-in at any time after 16:00. You can check out any time before 11:00. Early check-in and late check-out are not allowed.<br /><br />(2) When can we stay?<br />Calendar is always up-to-date. Minimum stay is two night. <br /><br />(3) How much are children.<br />2 years old and under are free. There is no available beds for children.<br /><br /><b>Guest access</b><br />The room is just for you so you can enter and leave anytime you want. <br />\u203bPlease be respectful about noise to my neighbors though.<br /><br /><b>Other things to note</b><br />We do not provide toothbrushes, please bring your own. Thank you.<br /><br /><b>Registration number</b><br />M130035559",
+    "description": "Proudly Superhost since 2014.<br /><br />Step into the comfort of this inviting 3BR 2.5Bath house in the picturesque Hirafu Village. It promises a relaxing retreat within walking distance to ski lifts, hot springs, restaurants, shops, bars, and the free shuttle bus that take you anywhere in the resort.<br /><br />The stylish design will leave you in awe.<br /><br />\u2714 3 Comfy BRs<br />\u2714 Open Design Living + Fireplace<br />\u2714 Air Conditioning<br />\u2714 Full Kitchen<br />\u2714 Balcony<br />\u2714 Smart TV<br />\u2714 High-Speed Wi-Fi<br />\u2714 Ski Locker Room<br />\u2714 Free Parking<br /><br /><b>The space</b><br />\"We loved staying at Snow Monkey! The location was central and easily walkable to downtown, the living room was perfect for our family of 6, the bedrooms were comfy, and the bathrooms were perfect. Five stars!\"<br /><br />Let's start our tour of the beautiful Show Monkey 2 on the upper floor, where you'll be greeted by the stylish yet very comfortable open living area. Its elegant design and d\u00e9cor complement the fantastic location in mesmerizing Hirafu Village.<br /><br />The fully equipped kitchen blends with the dining area, where you'll cook and enjoy tasty meals with your family and friends before relaxing in the living room, setting the scene for memorable evenings. Natural light bursts through large floor-to-ceiling windows, accenting the tastefully picked d\u00e9cor and enriching the pleasant setting.<br /><br />Relax in three cozy bedrooms boasting fantastic comforts to offer a delightful stay and maximum privacy after spending the day at the ski slopes or exploring exciting attractions and natural landmarks.<br /><br />Finally, you can step onto the private balcony to catch some fresh air and enjoy a glass of fine wine, enjoying views of the village.<br /><br />There's so much to do in this inviting house. We look forward to you experiencing its complete comfort and coziness.<br /><br />\u2605 LIVING ROOM \u2605<br />It immediately feels like home! Find your place on the comfy sofa, cuddle up with a good book by the fireplace, or discuss your upcoming Niseko adventures.<br /><br />\u2714 Comfortable Sofa<br />\u2714 Smart TV with Netflix<br />\u2714 Air Conditioning<br />\u2714 iPod Player<br />\u2714 Indoor Fireplace<br />\u2714 Comfy Sofa & Accent Chairs<br />\u2714 Coffee Table<br />\u2714 Designer Reading Lamp<br /><br />\u2605 KITCHEN & DINING \u2605<br />The fully equipped kitchen features modern appliances for preparing delicious snacks, breakfasts, or three-course gourmet dinners. Ample countertops offer plenty of room to unleash your cooking creativity.<br /><br />\u2714 Stove<br />\u2714 Oven<br />\u2714 Toaster<br />\u2714 Rice Maker<br />\u2714 French Press<br />\u2714 Hot Water Kettle<br />\u2714 Refrigerator/Freezer<br />\u2714 Sink - Hot & Cold Water<br />\u2714 Trays<br />\u2714 Glasses<br />\u2714 Silverware<br />\u2714 Pots & Pans<br /><br />Unwind and catch up with your loved ones in the gorgeous living room while the food is getting ready. When done, serve it on the dining table and enjoy a delicious meal in an inviting and warm atmosphere.<br /><br />\u2714 Dining Table with Seating for 8<br /><br />\u2605 SLEEPING ARRANGEMENTS \u2013 3 BEDROOMS \u2605<br />After a day at the slopes and onsens, you will look to rest for an equally entertaining tomorrow. Once you are ready to relax, please make your way to these comfortable bedrooms, all nestled on the lower level.<br /><br />\u265b Master Bedroom: Queen-Size Bed, Workspace (Desk, Chair), Ensuite Bathroom<br />\u265b Bedroom 2: Queen-Size Bed<br />\u265b Bedroom 3: Queen-Size Bed<br /><br />All bedrooms are equipped with a similar set of amenities.<br /><br />\u2714 Premium Pillows, Linens, and Sheets<br />\u2714 Closets with Hangers and Shelves<br />\u2714 Night Stands with Reading Lamps<br /><br />\u2605 BATHROOMS \u2605<br />In addition to the master bedroom's ensuite bathroom, another full bathroom and a convenient half bath are accessible from the hallway. All are stocked with fresh, pampering towels and toiletries to ensure a hassle-free stay.<br /><br />\u2714 Designer Soaker Tub + Separate Walk-In Shower (Master Bath)<br />\u2714 Walk-In Shower<br />\u2714 Vanity (Double in the Master Bath)<br />\u2714 Mirror<br />\u2714 Toilet<br />\u2714 Towels<br />\u2714 Hair Dryer<br />\u2714 Essential Toiletries<br /><br /><b>Guest access</b><br />Guest access <br /><br />The house is exclusively yours, without interruption during your stay, so relax, unwind, and make yourself at home. <br /><br />Other than the already mentioned amenities, our home is also equipped with the following:<br /><br />\u2714 High-Speed Wi-Fi<br />\u2714 Self Check-In (Lockbox)<br />\u2714 Air Conditioning<br />\u2714 Heating<br />\u2714 Heated Ski Locker Room<br />\u2714 Iron/Board<br />\u2714 Washer<br />\u2714 Free Parking<br /><br /><b>Other things to note</b><br />\u2605 CLEANING & SANITIZATION \u2605<br />Health, safety, and well-being of our guests are of utmost importance. For this reason, we use a thorough cleaning process after each check-out. <br /><br />\u2605 NO PETS ALLOWED \u2605<br />We love those little (and not so little) furry bundles of joy. Sadly, our home is not suitable to accommodate them.<br /><br />\u2605 NO SMOKING INSIDE \u2605<br />Please refrain from smoking inside the home! Any smoking evidence will incur a fee for odor removal and furniture cleaning.<br /><br />\u2605 NO PARTIES/EVENTS \u2605<br />We kindly ask you to treat our home as your own to preserve its pristine condition for future guests and your return visits.<br /> <br />Thank you very much for your understanding.<br /><br /><b>Registration number</b><br />Hotels and Inns Business Act | \u5317\u6d77\u9053\u5036\u77e5\u5b89\u4fdd\u5065\u6240 | \u5f8c\u4fdd\u751f\u7b2c \uff15\uff15\uff10 \u53f7\u6307\u4ee4",
     "title": "",
     "language": "en",
     "price": {
