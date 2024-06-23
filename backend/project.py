@@ -1,7 +1,5 @@
-import gobnb, json, tkinter, customtkinter, sqlite3, re, textwrap, requests
+import gobnb, json, sqlite3, re
 from datetime import datetime
-from PIL import Image, ImageTk
-from io import BytesIO
 
 
 DATABASE = r"..\db\database.db"
@@ -209,7 +207,7 @@ def retrieve_from_json(column: str, listing: dict) -> any:
         return listing[column]
 
 
-def create_checkboxes(frame: customtkinter.CTkFrame) -> dict:
+def create_checkboxes() -> dict:
     """Sets up the checkboxes"""
     
     
