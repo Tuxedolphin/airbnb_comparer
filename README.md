@@ -30,3 +30,9 @@ in a dynamically generated table.
 
 Python
 SQLite3
+
+## Bug Fixes
+
+If one has encountered the error `ModuleNotFoundError: No module named 'bottle.ext.websocket'`, you can
+refer to the video as follows:
+`https://youtu.be/uOdp_E1vL68?si=vPV6tK98I_Mv6s1M`

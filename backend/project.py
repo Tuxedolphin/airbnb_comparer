@@ -178,7 +178,7 @@ def retrieve_from_json(column: str, listing: dict) -> any:
         "Rating": "average_rating",
         "URL": "url",
         "Duration": "duration",
-        "Coordinates": "coordinates",
+        "location": "location",
         "Getting Around": "getting_around",
         "Check In/ Out Timing": "check_in_out",
         "Layout": "layout",
