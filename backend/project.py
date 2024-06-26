@@ -2,7 +2,7 @@ import gobnb, json, sqlite3, re
 from datetime import datetime
 
 
-DATABASE = r"..\db\database.db"
+DATABASE = r"../db/database.db"
 
 
 class Listing:
@@ -419,7 +419,7 @@ def db_table_filter(column: str) -> str:
     return None
 
 
-def retrieve_from_location(database: str, location: str) -> list:
+def retrieve_from_location(location: str, database: str = DATABASE) -> list:
     """
     Retrieve all the listings that is located at a particular place
 

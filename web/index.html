@@ -73,12 +73,31 @@
                         <label for="images">Images</label>
                     </div>
                 </fieldset>
-
-                <button id="menu-button" type="button">Submit</button>
             </form>
+            <div class="button-group">
+                <button id="menu-button" type="button">Submit</button>
+                <button id="add-button" type="button">Add Listing</button>
+                <button id="settings-button" type="button">Settings</button>
+            </div>
         </div>
         <div class="table">
 
         </div>
+
+        <dialog>
+            <h1 class="add-header">Add a Listing</h1>
+            <form class="add-listing">
+                <label for="link">Link: </label>
+                <input id="link">
+                <label for="dailyPrice">Daily Price: </label>
+                <input id="dailyPrice">
+                <label for="MiscPrice">Misc Price: </label>
+                <input id="MiscPrice">
+
+                <button type="button" formmethod="dialog" id="addButton">Add</button>
+                <button type="button" formmethod="dialog" id="cancelButton">Cancel</button>
+            </form>
+        </dialog>
+
     </body>
 </html>

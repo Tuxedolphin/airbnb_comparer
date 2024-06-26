@@ -5,12 +5,12 @@ eel.init("./web")
 
 
 @eel.expose
-def get_listings():
-    ...
+def get_listings(location):
+    return project.retrieve_from_location(location)
     
 @eel.expose
-def test():
-    print("hello")
+def add_listing(link, daily_price, misc_price) -> None:
+    ...
     
  
 eel.start("index.html")
