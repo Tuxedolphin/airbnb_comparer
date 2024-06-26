@@ -11,12 +11,12 @@
 }
 
 * {
-    background-color: var(--background);
     color: #FFFFFF;
     font-family:Arial, Helvetica, sans-serif;
 }
 
 body {
+    background-color: var(--background);
     display: grid;
     justify-content: center;
     grid-template-columns: min(35vw, 350px) calc(95vw - min(35vw, 350px));
@@ -25,13 +25,17 @@ body {
     min-height: 98vh;
 }
 
-.menu {
+.menu, .settings {
     background-color: var(--backgroundColour01, silver);
     padding: 15px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+.settings {
+    display: none;
 }
 
 .menu > *, form > *, fieldset > *, .input-group > *{

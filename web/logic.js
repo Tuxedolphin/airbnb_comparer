@@ -25,7 +25,17 @@ addButton.addEventListener("click", (e) => {
 });
 
 settingsButton.addEventListener("click", (e) => {
+    menu = document.querySelector(".menu");
+    menuElements = document.querySelectorAll(".menu > *");
 
+    // Hides the original elements
+    menu.style.display = "none";
+
+    settings = document.querySelector(".settings");
+    settingElements = document.querySelectorAll(".settings > *");
+
+    // Makes the elements of settings visible
+    settings.style.display = "grid";
 });
 
 // Adding functionalities for buttons of the modal

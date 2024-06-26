@@ -10,7 +10,7 @@ def get_listings(location):
     
 @eel.expose
 def add_listing(link, daily_price, misc_price) -> None:
-    ...
+    project.add_listing(link, [daily_price, misc_price])
     
  
 eel.start("index.html")
