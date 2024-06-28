@@ -13,7 +13,7 @@ let listings;
 menuButton.addEventListener("click", (e) => {
 
     // Only look for listings if the location is different
-    if (currentLocation !== searchLocation.value) {
+    if (currentLocation.toLowerCase() !== searchLocation.value.toLowerCase()) {
         currentLocation = searchLocation.value;
         listings = eel.get_listings(currentLocation);
     }
@@ -62,3 +62,22 @@ modalCancelButton.addEventListener("click", (e) => {
     dialog.close();
 
 });
+
+// Selects the table for automatic table generation
+listingTable = document.querySelector("#listing-table");
+tableHeader = listingTable.querySelector("thead > tr");
+tableBody = listingTable.querySelector("tbody");
+
+// Dynamically generates the table using the required information
+function generateTable(listingDicts, columns) {
+
+    for (column of column) {
+        newHeader = document.createElement("th");
+        newHeader.textContent = column;
+        tableHeader.appendChild(newHeader);
+    }
+
+    for (listing of listingDicts) {
+        
+    }
+}

@@ -29,9 +29,8 @@ body {
     background-color: var(--backgroundColour01, silver);
     padding: 15px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    display: grid;
+    grid-template-rows: 30vh 30vh 30vh;
 }
 
 .settings {

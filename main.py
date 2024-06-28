@@ -5,7 +5,8 @@ eel.init("./web")
 
 
 @eel.expose
-def get_listings(location):
+def get_listings(location) -> list:
+    """ Returns a list of dictionaries """
     return project.retrieve_from_location(location)
     
 @eel.expose
