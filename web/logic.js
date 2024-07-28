@@ -24,21 +24,12 @@ let checkboxID = new Map([
     ["Super Host", "super-host"],
     ["Amenities", "amenities"],
     ["Notes", "notes"],
-    ["Images", "images"],
-    ["Cover", "cover"],
+    ["Images", "images"]
 ])
 
 // Adding functionalities for all the buttons
 menuButton.addEventListener("click", (e) => {
-
-    // Only look for listings if the location is different
-    if (currentLocation.toLowerCase() !== searchLocation.value.toLowerCase()) {
-        currentLocation = searchLocation.value;
-        listings = eel.get_listings(currentLocation);
-    }
-
-    generateTable(listings);
-
+    eel.update_location(searchLocation.value.toLowerCase());
 });
 
 addButton.addEventListener("click", (e) => {
@@ -90,14 +81,23 @@ let tableHeader = listingTable.querySelector("thead > tr");
 let tableBody = listingTable.querySelector("tbody");
 
 // Dynamically generates the table using the required information
+eel.expose(generateTable);
 function generateTable(listingDicts) {
 
+    // Clears the original table to prevent duplicates
+    tableHeader.replaceChildren();
+    tableBody.replaceChildren();
+
     let columnsSelected = [];
+
+    let newHeader = document.createElement("th");
+    newHeader.textContent = "Cover";
+    tableHeader.appendChild(newHeader);
 
     // Loops through the checkboxes and selects those which are checked
     checkboxID.forEach((id, columnName) => {
         if (document.getElementById(id).checked) {
-            let newHeader = document.createElement("th");
+            newHeader = document.createElement("th");
             newHeader.textContent = columnName;
             tableHeader.appendChild(newHeader);
 
@@ -105,18 +105,32 @@ function generateTable(listingDicts) {
         }
     });
 
-    listingDicts.forEach((listing) => {
-        let newRow = document.createElement("tr");
-        tableBody.appendChild(newRow);
+    // Creates a new row for each listing
+    for (listing of listingDicts) {
+        eel.get_row(columnsSelected, listing)
+        };
+}
 
+// Dynamically adds a row to the table generated
+eel.expose(addRow);
+function addRow(row) {
+    let newRow = document.createElement("tr");
+    tableBody.appendChild(newRow);
+
+    row.forEach((array) => {
         let newCell = document.createElement("td");
-        newCell.textContent = listing;
-        newRow.appendChild(newCell);
 
-        columnsSelected.forEach((column) => {
-            newCell = document.createElement("td");
-            newCell.textContent = eel.retrieve_from_json(column, listing);
-            newRow.appendChild(newCell);
-        });
-    })
+        let [type, content] = array
+
+        // Tidies up the type of content
+        switch (type) {
+            case "Cover":
+                let newSubCell = document.createElement("img");
+                newSubCell.src = content;
+        }
+        
+
+        newCell.textContent = cell;
+        newRow.append(newCell);
+    });
 }

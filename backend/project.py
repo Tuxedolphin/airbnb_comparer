@@ -2,7 +2,7 @@ import gobnb, json, sqlite3, re
 from datetime import datetime
 
 
-DATABASE = r"../db/database.db"
+DATABASE = r"./db/database.db"
 
 
 class Listing:
@@ -432,7 +432,6 @@ def retrieve_from_location(location: str, database: str = DATABASE) -> list:
     """
 
     conn = sql_create_connection(database)
-    print(database)
 
     with conn:
         cursor = conn.cursor()
@@ -445,7 +444,7 @@ def retrieve_from_location(location: str, database: str = DATABASE) -> list:
 
         # Creates a list which stores all the IDs of the location
         ids = [int(row[0]) for row in cursor.fetchall()]
-
+    
     # Creates a list of dicts to store the description of all the listings
     return [Listing.sql_get(id) for id in ids]
 

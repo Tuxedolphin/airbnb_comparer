@@ -3,20 +3,36 @@ from backend import project
 
 eel.init("./web")
 
-@eel.expose
-def get_listings(location: str) -> list:
-    """ Returns a list of dictionaries """
-    return project.retrieve_from_location(location)
+# Keeps track of the stuff that are already saved
+location = ""
+listings = []
 
 @eel.expose
-def get_column(column: str, listing: dict) -> tuple[str, any]:
-    """Returns the required information from the json file"""
-    print("Retrieved")
-    return project.retrieve_from_json(column, listing)
+def update_location(new_location: str) -> None:
+    """ Updates the location to be searched """
+    
+    global location
+    global listings
+    
+    if new_location.lower() != location.lower():
+        location = new_location
+        listings = project.retrieve_from_location(location)
+        
+    eel.generateTable(listings)
+        
+@eel.expose
+def get_row(columns: str, listing) -> any:
+    """Retrieves the requires columns from the listing """
+
+    row = [["Cover", project.retrieve_from_json("Cover", listing)]] # To make sure that the cover is the first one
+    
+    for column in columns:
+        row.append([column, project.retrieve_from_json(column, listing)])
+        
+    eel.addRow(row)
 
 @eel.expose
 def add_listing(link, daily_price, misc_price) -> None:
     project.add_listing(link, [daily_price, misc_price])
-    
- 
+
 eel.start("index.html")
