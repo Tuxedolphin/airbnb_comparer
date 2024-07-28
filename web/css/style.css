@@ -8,6 +8,8 @@
     --textPriColor: white;
     --textDarkColor: black;
     --backgroundColour01: rgba(255, 255, 255, 0.05);
+    --gray: rgb(107, 107, 107);
+    --darkGray: rgb(57, 57, 57);
 }
 
 * {
@@ -30,7 +32,21 @@ body {
     padding: 15px;
 
     display: grid;
-    grid-template-rows: 30vh 30vh 30vh;
+    grid-template-rows: 15vh 75vh 5vh;
+}
+
+.menu input[type="text"] {
+    min-width: 90%;
+}
+
+.button-group {
+    align-self: self-end;
+    justify-self: center;
+}
+
+button {
+    background-color: gray;
+    border-radius: 5px;
 }
 
 .settings {
@@ -47,12 +63,11 @@ fieldset {
     margin-bottom: 20px;
 }
 
-#search-location {
+input[type="text"], input[type="url"], input[type="number"] {
     border: none;
     appearance: none;
     padding: 12px;
     border-radius: 3px;
-    min-width: 90%;
 
     background-color: rgba(255, 255, 255, 0.08);
 }
@@ -64,6 +79,16 @@ fieldset {
 #search-location::placeholder {
     color: rgba(255, 255, 255, 0.7);
     transition: color 0.3s ease;
+}
+
+dialog#add-listing {
+    background-color: rgb(37, 37, 37);
+    border-color: black;
+    text-align: center;
+}
+
+dialog button {
+    margin: 20px 2px 5px 2px;
 }
 
 .table {

@@ -330,7 +330,6 @@ def sql_add_entry(database: str, items: dict) -> None:
         status (customtkinter.Label): For the status
     """
 
-    # TODO: Add status for root
     conn = sql_create_connection(database)
 
     with conn:
@@ -433,6 +432,7 @@ def retrieve_from_location(location: str, database: str = DATABASE) -> list:
     """
 
     conn = sql_create_connection(database)
+    print(database)
 
     with conn:
         cursor = conn.cursor()

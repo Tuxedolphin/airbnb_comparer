@@ -97,19 +97,20 @@
             </table>
         </div>
 
-        <dialog>
+        <dialog id="add-listing">
             <h1 class="add-header">Add a Listing</h1>
-            <form class="add-listing">
+            <form class="add-listing" id="add-listing-form">
                 <label for="link">Link: </label>
                 <input id="link" type="url">
                 <label for="dailyPrice">Daily Price: </label>
                 <input id="dailyPrice" type="number">
                 <label for="MiscPrice">Misc Price: </label>
                 <input id="MiscPrice" type="number">
-
-                <button type="button" formmethod="dialog" id="addButton">Add</button>
-                <button type="button" formmethod="dialog" id="cancelButton">Cancel</button>
             </form>
+            <div>
+                <button type="button" form="add-listing-form" formmethod="dialog" id="addButton">Add</button>
+                <button type="button" form="add-listing-form" formmethod="dialog" id="cancelButton">Cancel</button>
+            </div>
         </dialog>
 
     </body>

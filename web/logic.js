@@ -6,8 +6,27 @@ let filters = document.querySelectorAll(".input-group > input");
 let displayTable = document.querySelector("table");
 let dialog = document.querySelector("dialog");
 
-let currentLocation;
+let currentLocation = "";
 let listings;
+
+// All of the different columns
+let checkboxID = new Map([
+    ["ID", "id"],
+    ["Rating", "rating"],
+    ["URL", "url"],
+    ["Duration", "duration"],
+    ["location", "location"],
+    ["Getting Around", "getting-around"],
+    ["Check In/ Out Timing", "check-in-out"],
+    ["Layout", "layout"],
+    ["Capacity", "capacity"],
+    ["Cost", "cost"],
+    ["Super Host", "super-host"],
+    ["Amenities", "amenities"],
+    ["Notes", "notes"],
+    ["Images", "images"],
+    ["Cover", "cover"],
+])
 
 // Adding functionalities for all the buttons
 menuButton.addEventListener("click", (e) => {
@@ -17,7 +36,9 @@ menuButton.addEventListener("click", (e) => {
         currentLocation = searchLocation.value;
         listings = eel.get_listings(currentLocation);
     }
-    
+
+    generateTable(listings);
+
 });
 
 addButton.addEventListener("click", (e) => {
@@ -64,20 +85,38 @@ modalCancelButton.addEventListener("click", (e) => {
 });
 
 // Selects the table for automatic table generation
-listingTable = document.querySelector("#listing-table");
-tableHeader = listingTable.querySelector("thead > tr");
-tableBody = listingTable.querySelector("tbody");
+let listingTable = document.querySelector("#listing-table");
+let tableHeader = listingTable.querySelector("thead > tr");
+let tableBody = listingTable.querySelector("tbody");
 
 // Dynamically generates the table using the required information
-function generateTable(listingDicts, columns) {
+function generateTable(listingDicts) {
 
-    for (column of column) {
-        newHeader = document.createElement("th");
-        newHeader.textContent = column;
-        tableHeader.appendChild(newHeader);
-    }
+    let columnsSelected = [];
 
-    for (listing of listingDicts) {
-        
-    }
+    // Loops through the checkboxes and selects those which are checked
+    checkboxID.forEach((id, columnName) => {
+        if (document.getElementById(id).checked) {
+            let newHeader = document.createElement("th");
+            newHeader.textContent = columnName;
+            tableHeader.appendChild(newHeader);
+
+            columnsSelected.push(columnName);
+        }
+    });
+
+    listingDicts.forEach((listing) => {
+        let newRow = document.createElement("tr");
+        tableBody.appendChild(newRow);
+
+        let newCell = document.createElement("td");
+        newCell.textContent = listing;
+        newRow.appendChild(newCell);
+
+        columnsSelected.forEach((column) => {
+            newCell = document.createElement("td");
+            newCell.textContent = eel.retrieve_from_json(column, listing);
+            newRow.appendChild(newCell);
+        });
+    })
 }
