@@ -201,7 +201,7 @@ def retrieve_from_json(column: str, listing: dict) -> any:
 
     elif column == "cover":
         # Get the cover photo
-        return listing["images"][2]
+        return listing["images"][0]
 
     else:
         return listing[column]

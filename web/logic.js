@@ -1,10 +1,11 @@
+// Selects all of the stuff
 let menuButton = document.querySelector("#menu-button");
 let addButton = document.querySelector("#add-button");
 let settingsButton = document.querySelector("#settings-button");
 let searchLocation = document.querySelector("#search-location");
 let filters = document.querySelectorAll(".input-group > input");
 let displayTable = document.querySelector("table");
-let dialog = document.querySelector("dialog");
+let dialog = document.querySelector("dialog#add-listing");
 
 let currentLocation = "";
 let listings;
@@ -119,18 +120,113 @@ function addRow(row) {
 
     row.forEach((array) => {
         let newCell = document.createElement("td");
+        newRow.appendChild(newCell);
 
         let [type, content] = array
 
-        // Tidies up the type of content
+        // Tidies up the type of content and filters them to make it more readable
         switch (type) {
             case "Cover":
-                let newSubCell = document.createElement("img");
+                var newSubCell = document.createElement("img");
                 newSubCell.src = content;
-        }
-        
+                newCell.appendChild(newSubCell);
+                break;
+                
+            case "Rating":
+                newCell.textContent = Math.round(content * 100) / 100;
+                break;
 
-        newCell.textContent = cell;
-        newRow.append(newCell);
+            case "URL":
+                var newSubCell = document.createElement("a");
+                newSubCell.href = content;
+                let newButton = document.createElement("button");
+                newButton.textContent = "View Listing";
+                newCell.appendChild(newSubCell);
+                newSubCell.appendChild(newButton);
+                break
+
+            case "Duration":
+                newCell.textContent = content + " days";
+                break;
+
+            case "Capacity":
+                newCell.textContent = content + " people";
+                break;
+
+            case "Check In/ Out Timing":
+                let newParagraph;
+                content.forEach((value) => {
+                    newParagraph = document.createElement("p");
+                    newParagraph.textContent = value;
+                    newCell.appendChild(newParagraph);
+                })
+                break;
+
+            case "Layout":
+                var newSubCell = document.createElement("ul");
+                newCell.appendChild(newSubCell);
+
+                let newListElement;
+                content[0].forEach((content) => {
+                    newListElement = document.createElement("li");
+                    newListElement.textContent = content;
+                    newSubCell.appendChild(newListElement);
+                });
+                break;
+
+            case "Cost":
+                newCell.textContent = "$" + content;
+                break;
+
+            case "Super Host":
+                newCell.textContent = (content === "true") ? "Yes" : "No";
+                break
+
+            case "Amenities":
+                // Initialise all of these first for use in loop
+                let newHeaderList = document.createElement("ol");
+                newCell.appendChild(newHeaderList);
+                let newHeader;
+                let newItemList;
+                let newItem;
+
+                // Create a nested list of lists
+                for (const [header, items] of Object.entries(content)) {
+                    newHeader = document.createElement("li");
+                    newHeader.textContent = header;
+                    newHeaderList.appendChild(newHeader);
+
+                    newItemList = document.createElement("ul");
+                    newHeader.appendChild(newItemList);
+
+                    items.forEach((item) => {
+                        newItem = document.createElement("li");
+                        newItem.textContent = item;
+                        newItemList.appendChild(newItem);
+                    });
+                }
+                break;
+
+            case "Images":
+                var newSubCell = document.createElement("button");
+                newSubCell.textContent = "See Images";
+                let newImage;
+                newSubCell.addEventListener("click", (e) => {
+                    let imagesDialog = document.querySelector("#show-images");
+                    imagesDialog.showModal();
+
+                    content.forEach((imageLink) => {
+                        newImage = document.createElement("img");
+                        newImage.src = imageLink;
+                        imagesDialog.appendChild(newImage);
+                    });
+                });
+                newCell.appendChild(newSubCell);
+                break;
+
+            default:
+                console.log(content);
+                newCell.textContent = content;
+        }
     });
 }

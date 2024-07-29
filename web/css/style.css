@@ -45,7 +45,7 @@ body {
 }
 
 button {
-    background-color: gray;
+    background-color: var(--gray);
     border-radius: 5px;
 }
 
@@ -91,6 +91,15 @@ dialog button {
     margin: 20px 2px 5px 2px;
 }
 
-.table {
+.table-background {
     background-color: var(--backgroundColour01, silver);
 }
+
+/* Formats tables */
+table {
+    border-collapse: collapse;
+
+}
+
+
+
