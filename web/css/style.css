@@ -81,7 +81,7 @@ input[type="text"], input[type="url"], input[type="number"] {
     transition: color 0.3s ease;
 }
 
-dialog#add-listing {
+dialog {
     background-color: rgb(37, 37, 37);
     border-color: black;
     text-align: center;
@@ -96,10 +96,57 @@ dialog button {
 }
 
 /* Formats tables */
+
 table {
     border-collapse: collapse;
+    background-color: var(--backgroundColour01);
+    padding: 10px;
+    width: 100%;
+    text-align: center;
 
+    --height: max(10vh, 150px)
 }
 
+table img {
+    height: 100%;
+}
 
+.table-container {
+    overflow: auto;
+    max-height: 98vh;
+}
 
+table td.amenities {
+    text-align: left;
+}
+
+table div.amenities {
+    max-height: var(--height);
+    overflow-y: auto;
+}
+
+table button.edit {
+    font-size: 30px;
+}
+
+thead {
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+th, td {
+    padding: 5px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+th {
+    margin: 5px;
+}
+
+td {
+    height: var(--height);
+}
+
+tr:hover {
+    background: var(--backgroundColour01);
+}

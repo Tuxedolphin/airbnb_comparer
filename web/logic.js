@@ -184,8 +184,13 @@ function addRow(row) {
 
             case "Amenities":
                 // Initialise all of these first for use in loop
+                newCell.classList = "amenities"
+                let amenitiesContainer = document.createElement("div");
+                amenitiesContainer.classList = "amenities";
+                newCell.appendChild(amenitiesContainer);
+
                 let newHeaderList = document.createElement("ol");
-                newCell.appendChild(newHeaderList);
+                amenitiesContainer.appendChild(newHeaderList);
                 let newHeader;
                 let newItemList;
                 let newItem;
@@ -229,4 +234,17 @@ function addRow(row) {
                 newCell.textContent = content;
         }
     });
+
+    // Adds the edit button at the very end
+    newCell = document.createElement("td");
+    newRow.appendChild(newCell);
+
+    let editButton = document.createElement("button")
+    editButton.classList = "edit";
+
+    let editSymbol = document.createElement("i");
+    editSymbol.classList = "fa fa-edit";
+
+    newCell.appendChild(editButton);
+    editButton.appendChild(editSymbol);
 }
