@@ -1,4 +1,4 @@
-import gobnb, json, sqlite3, re
+import gobnb, json, sqlite3, re  # type: ignore
 from datetime import datetime
 
 
@@ -8,9 +8,7 @@ DATABASE = r"./db/database.db"
 class Listing:
 
     @classmethod
-    def add_listing(
-        cls, link: str, costs: list, currency="SGD"
-    ) -> None:
+    def add_listing(cls, link: str, costs: list[int], currency: str = "SGD") -> None:
         """
         Scrapes the listing for the more important information, before storing it into a json file (more for myself)
 
@@ -161,6 +159,7 @@ class Listing:
 
     def __init__(self) -> None: ...
 
+
 def retrieve_from_json(column: str, listing: dict) -> any:
     """
     Retrieves the required data from the given dictionary of listing
@@ -209,8 +208,7 @@ def retrieve_from_json(column: str, listing: dict) -> any:
 
 def create_checkboxes() -> dict:
     """Sets up the checkboxes"""
-    
-    
+
     checkbox_contents = {
         "ID": "id",
         "Rating": "average_rating",
@@ -229,7 +227,6 @@ def create_checkboxes() -> dict:
     }
 
 
-
 def sql_create_connection(db_file: str) -> sqlite3.Connection:
     """
     Create a database connection to the sqlite database (db_file)
@@ -243,9 +240,7 @@ def sql_create_connection(db_file: str) -> sqlite3.Connection:
         conn = sqlite3.connect(db_file)
         return conn
     except sqlite3.Error as e:
-        print(f"SQLite error occurred: {e}")
-
-    return conn
+        raise RuntimeError(f"SQLite error occurred: {e}")
 
 
 def sql_create_table(conn: sqlite3.Connection, create_table_statement: str) -> None:
@@ -415,7 +410,7 @@ def db_table_filter(column: str) -> str:
     if column in id:
         return "id"
 
-    return None
+    return ""
 
 
 def retrieve_from_location(location: str, database: str = DATABASE) -> list:
@@ -444,8 +439,6 @@ def retrieve_from_location(location: str, database: str = DATABASE) -> list:
 
         # Creates a list which stores all the IDs of the location
         ids = [int(row[0]) for row in cursor.fetchall()]
-    
+
     # Creates a list of dicts to store the description of all the listings
     return [Listing.sql_get(id) for id in ids]
-
-

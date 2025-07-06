@@ -1,6 +1,2 @@
-pip install gobnb
-pip install jsonlib
-pip install db-sqlite3
-pip install regex
-pip install Python-IO
-pip install eel
+gobnb==0.0.12
+Eel==0.18.2
