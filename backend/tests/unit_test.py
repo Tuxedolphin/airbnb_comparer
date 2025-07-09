@@ -10,6 +10,7 @@ import logging
 import sys
 from unittest.mock import Mock, patch, MagicMock, call
 from datetime import datetime
+from typing import Dict, Any, List
 
 # Import modules to test
 from backend.constants import CHECKBOX_FIELD_MAPPING, DATABASE_PATH
@@ -92,7 +93,7 @@ class TestDataProcessor:
 
     def test_calculate_average_rating(self):
         """Test rating calculation."""
-        rating_data = {
+        rating_data: Dict[str, Any] = {
             "cleanliness": 4.5,
             "communication": 4.8,
             "location": 4.2,
@@ -106,7 +107,7 @@ class TestDataProcessor:
 
     def test_calculate_average_rating_empty(self):
         """Test rating calculation with empty data."""
-        rating_data = {"review_count": 150}
+        rating_data: Dict[str, Any] = {"review_count": 150}
 
         result = calculate_average_rating(rating_data)
 
@@ -114,7 +115,7 @@ class TestDataProcessor:
 
     def test_extract_amenities(self):
         """Test amenities extraction."""
-        amenities_data = [
+        amenities_data: List[Dict[str, Any]] = [
             {
                 "title": "Kitchen",
                 "values": [
@@ -166,7 +167,7 @@ class TestDataProcessor:
 
     def test_validate_listing_data_valid(self):
         """Test listing data validation with valid data."""
-        listing_data = {
+        listing_data: Dict[str, Any] = {
             "id": 12345,
             "url": "https://airbnb.com/rooms/12345",
             "duration": 4,
@@ -178,7 +179,7 @@ class TestDataProcessor:
 
     def test_validate_listing_data_invalid(self):
         """Test listing data validation with missing fields."""
-        listing_data = {
+        listing_data: Dict[str, Any] = {
             "id": 12345,
             "url": "https://airbnb.com/rooms/12345",
             # Missing duration, daily_cost, misc_cost
@@ -192,7 +193,7 @@ class TestDataRetrieval:
 
     def test_extract_field_from_listing_basic(self):
         """Test basic field extraction."""
-        listing = {
+        listing: Dict[str, Any] = {
             "id": 12345,
             "location": "Tokyo",
             "duration": 4,
@@ -206,7 +207,7 @@ class TestDataRetrieval:
 
     def test_extract_field_from_listing_calculated_cost(self):
         """Test calculated cost field extraction."""
-        listing = {
+        listing: Dict[str, Any] = {
             "duration": 4,
             "daily_cost": 100,
             "misc_cost": 50,
@@ -219,7 +220,7 @@ class TestDataRetrieval:
 
     def test_extract_field_from_listing_cover_image(self):
         """Test cover image extraction."""
-        listing = {
+        listing: Dict[str, Any] = {
             "images": ["image1.jpg", "image2.jpg"],
         }
 
@@ -229,7 +230,7 @@ class TestDataRetrieval:
 
     def test_extract_field_from_listing_unknown_field(self):
         """Test extraction with unknown field."""
-        listing = {"id": 12345}
+        listing: Dict[str, Any] = {"id": 12345}
 
         with pytest.raises(KeyError, match="Unknown field"):
             extract_field_from_listing("UnknownField", listing)
@@ -257,7 +258,7 @@ class TestDatabaseManager:
                 db_manager.create_tables()
 
                 # Test adding and retrieving a listing
-                listing_data = {
+                listing_data: Dict[str, Any] = {
                     "id": 12345,
                     "url": "https://airbnb.com/rooms/12345",
                     "duration": 4,
@@ -288,7 +289,7 @@ class TestDatabaseManager:
                 assert db_manager.listing_exists(12345) is False
 
                 # Add a listing
-                listing_data = {
+                listing_data: Dict[str, Any] = {
                     "id": 12345,
                     "url": "https://airbnb.com/rooms/12345",
                     "duration": 4,
@@ -354,7 +355,7 @@ class TestValidation:
 
     def test_validate_required_fields_all_present(self):
         """Test required fields validation with all fields present."""
-        data = {"id": 1, "name": "test", "url": "https://example.com"}
+        data: Dict[str, Any] = {"id": 1, "name": "test", "url": "https://example.com"}
         required = ["id", "name", "url"]
 
         result = validate_required_fields(data, required)
@@ -362,7 +363,7 @@ class TestValidation:
 
     def test_validate_required_fields_missing_some(self):
         """Test required fields validation with missing fields."""
-        data = {"id": 1, "name": "test"}
+        data: Dict[str, Any] = {"id": 1, "name": "test"}
         required = ["id", "name", "url", "duration"]
 
         result = validate_required_fields(data, required)
@@ -370,7 +371,7 @@ class TestValidation:
 
     def test_validate_required_fields_empty_data(self):
         """Test required fields validation with empty data."""
-        data = {}
+        data: Dict[str, Any] = {}
         required = ["id", "name"]
 
         result = validate_required_fields(data, required)
@@ -423,7 +424,7 @@ class TestValidation:
         assert result == "a" * 1000
 
     @patch("backend.validation.logger")
-    def test_sanitize_string_truncation_warning(self, mock_logger):
+    def test_sanitize_string_truncation_warning(self, mock_logger: MagicMock):
         """Test string sanitization logs warning when truncating."""
         long_string = "a" * 1500
         sanitize_string(long_string, max_length=1000)
@@ -431,17 +432,17 @@ class TestValidation:
 
     def test_validate_json_data_valid(self):
         """Test JSON validation with valid data."""
-        data = {"key": "value", "number": 123, "list": [1, 2, 3]}
+        data: Dict[str, Any] = {"key": "value", "number": 123, "list": [1, 2, 3]}
         assert validate_json_data(data) is True
 
     def test_validate_json_data_invalid_function(self):
         """Test JSON validation with function (non-serializable)."""
-        data = {"key": lambda x: x}
+        data: Dict[str, Any] = {"key": lambda x: x}  # type: ignore
         assert validate_json_data(data) is False
 
     def test_validate_json_data_invalid_complex_object(self):
         """Test JSON validation with complex object."""
-        data = {"key": object()}
+        data: Dict[str, Any] = {"key": object()}
         assert validate_json_data(data) is False
 
 
@@ -450,9 +451,9 @@ class TestScraper:
 
     @patch("backend.scraper.pyairbnb.get_details")
     @patch("builtins.open", new_callable=MagicMock)
-    def test_scrape_listing_data_success(self, mock_open, mock_get_details):
+    def test_scrape_listing_data_success(self, mock_open: MagicMock, mock_get_details: MagicMock):
         """Test successful listing data scraping."""
-        mock_data = {
+        mock_data: Dict[str, Any] = {
             "id": 12345,
             "name": "Test Listing",
             "location": "Test Location",
@@ -477,7 +478,7 @@ class TestScraper:
         )
 
     @patch("backend.scraper.pyairbnb.get_details")
-    def test_scrape_listing_data_failure(self, mock_get_details):
+    def test_scrape_listing_data_failure(self, mock_get_details: MagicMock):
         """Test scraping failure handling."""
         mock_get_details.side_effect = Exception("API Error")
 
@@ -495,7 +496,7 @@ class TestScraper:
     @patch("backend.scraper.validate_listing_data")
     @patch("backend.scraper.DatabaseManager")
     def test_add_listing_success(
-        self, mock_db_manager, mock_validate, mock_process, mock_extract, mock_scrape
+        self, mock_db_manager: MagicMock, mock_validate: MagicMock, mock_process: MagicMock, mock_extract: MagicMock, mock_scrape: MagicMock
     ):
         """Test successful listing addition."""
         # Setup mocks
@@ -526,7 +527,7 @@ class TestScraper:
 
     @patch("backend.scraper.extract_from_url")
     @patch("backend.scraper.validate_listing_data")
-    def test_add_listing_invalid_data(self, mock_validate, mock_extract):
+    def test_add_listing_invalid_data(self, mock_validate: MagicMock, mock_extract: MagicMock):
         """Test listing addition with invalid data."""
         mock_extract.return_value = (12345, 4, "2023-12-01", "2023-12-05", 2)
         mock_validate.return_value = False
@@ -538,12 +539,12 @@ class TestScraper:
                 add_listing("https://airbnb.com/rooms/12345", 450)
 
     @patch("backend.scraper.DatabaseManager")
-    def test_update_listing_costs_success(self, mock_db_manager):
+    def test_update_listing_costs_success(self, mock_db_manager: MagicMock):
         """Test successful listing cost update."""
         mock_db_instance = MagicMock()
         mock_db_manager.return_value.__enter__.return_value = mock_db_instance
 
-        mock_listing_data = {
+        mock_listing_data: Dict[str, Any] = {
             "id": 12345,
             "url": "https://airbnb.com/rooms/12345",
             "duration": 4,
@@ -559,7 +560,7 @@ class TestScraper:
         mock_db_instance.add_entry.assert_called_once()
 
     @patch("backend.scraper.DatabaseManager")
-    def test_update_listing_costs_not_found(self, mock_db_manager):
+    def test_update_listing_costs_not_found(self, mock_db_manager: MagicMock):
         """Test listing cost update when listing not found."""
         mock_db_instance = MagicMock()
         mock_db_manager.return_value.__enter__.return_value = mock_db_instance
@@ -570,7 +571,7 @@ class TestScraper:
         assert result is False
 
     @patch("backend.scraper.DatabaseManager")
-    def test_update_listing_costs_database_error(self, mock_db_manager):
+    def test_update_listing_costs_database_error(self, mock_db_manager: MagicMock):
         """Test listing cost update with database error."""
         mock_db_manager.side_effect = Exception("Database error")
 
@@ -616,7 +617,7 @@ class TestMain:
     @patch("backend.main.setup_logging")
     @patch("backend.main.get_available_fields")
     def test_main_success(
-        self, mock_get_fields, mock_setup_logging, mock_db_manager
+        self, mock_get_fields: MagicMock, mock_setup_logging: MagicMock, mock_db_manager: MagicMock
     ):
         """Test successful main function execution."""
         mock_get_fields.return_value = ["ID", "Location", "Cost"]
@@ -635,7 +636,7 @@ class TestMain:
     @patch("backend.main.setup_logging")
     @patch("backend.main.get_available_fields")
     def test_main_database_error(
-        self, mock_get_fields, mock_setup_logging, mock_db_manager
+        self, mock_get_fields: MagicMock, mock_setup_logging: MagicMock, mock_db_manager: MagicMock
     ):
         """Test main function with database error."""
         mock_get_fields.return_value = ["ID", "Location", "Cost"]
@@ -661,14 +662,14 @@ class TestDatabaseManagerAdditional:
                 db_manager.create_tables()
 
                 # Add multiple listings
-                listing1 = {
+                listing1: Dict[str, Any] = {
                     "id": 1,
                     "url": "https://airbnb.com/rooms/1",
                     "duration": 3,
                     "daily_cost": 100,
                     "misc_cost": 30,
                 }
-                listing2 = {
+                listing2: Dict[str, Any] = {
                     "id": 2,
                     "url": "https://airbnb.com/rooms/2",
                     "duration": 5,
@@ -702,7 +703,7 @@ class TestDatabaseManagerAdditional:
                 assert db_manager.get_listing_count() == 0
 
                 # Add a listing
-                listing_data = {
+                listing_data: Dict[str, Any] = {
                     "id": 12345,
                     "url": "https://airbnb.com/rooms/12345",
                     "duration": 4,
@@ -728,7 +729,7 @@ class TestDatabaseManagerAdditional:
                 db_manager.create_tables()
 
                 # Add a listing
-                listing_data = {
+                listing_data: Dict[str, Any] = {
                     "id": 12345,
                     "url": "https://airbnb.com/rooms/12345",
                     "duration": 4,
@@ -793,7 +794,7 @@ class TestDatabaseManagerAdditional:
                 db_manager.create_tables()
 
                 # Try to add entry without ID
-                listing_data = {
+                listing_data: Dict[str, Any] = {
                     "url": "https://airbnb.com/rooms/12345",
                     "duration": 4,
                     "daily_cost": 100,
