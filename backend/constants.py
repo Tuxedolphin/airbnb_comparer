@@ -26,20 +26,28 @@ CHECKBOX_FIELD_MAPPING = {
     "Cost": "cost",
     "Super Host": "super_host",
     "Amenities": "amenities",
+    "Highlights": "highlights",
+    "Reviews Summary": "reviews_summary",
+    "House Rules": "house_rules",
+    "Property Details": "property_details",
     "Notes": "notes",
     "Images": "images",
     "Cover": "cover",
 }
 
 # Required fields for listing validation
-REQUIRED_LISTING_FIELDS = ["id", "url", "duration", "cost"]
+REQUIRED_LISTING_FIELDS = ["id", "url", "cost"]
 
 # Default scraping configuration
 DEFAULT_CURRENCY = "SGD"
 DEBUG_JSON_OUTPUT = "result.json"
 
 # URL patterns
-AIRBNB_URL_PATTERN = r"^https://www\.airbnb\.com(?:\.sg)?/rooms/(\d+)\?.*check_in=(.{10}).*check_out=(.{10}).*adults=(\d+)"
+AIRBNB_ROOM_ID_PATTERN = r"^https://www\.airbnb\.com(?:\.sg)?/rooms/(\d+)"
+AIRBNB_ADULTS_PATTERN = r"adults=(\d+)"
+AIRBNB_CHECK_IN_PATTERN = r"check_in=([^&]+)"
+AIRBNB_CHECK_OUT_PATTERN = r"check_out=([^&]+)"
+
 
 # Logging configuration
 LOG_FORMAT = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"

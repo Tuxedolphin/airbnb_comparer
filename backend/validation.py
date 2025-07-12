@@ -103,7 +103,7 @@ def sanitize_string(value: Any, max_length: int = 1000) -> str:
         return sanitized
 
     except Exception as e:
-        logger.error(f"Error sanitizing string: {e}")
+        logger.exception(f"Error sanitizing string: {e}")
         return ""
 
 
@@ -124,5 +124,5 @@ def validate_json_data(data: Any) -> bool:
         return True
 
     except (TypeError, ValueError) as e:
-        logger.error(f"Data is not JSON serializable: {e}")
+        logger.exception(f"Data is not JSON serializable: {e}")
         return False

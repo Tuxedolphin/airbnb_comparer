@@ -6,7 +6,12 @@ import re
 from datetime import datetime
 from typing import Tuple
 
-from .constants import AIRBNB_URL_PATTERN
+from .constants import (
+    AIRBNB_ROOM_ID_PATTERN,
+    AIRBNB_ADULTS_PATTERN,
+    AIRBNB_CHECK_IN_PATTERN,
+    AIRBNB_CHECK_OUT_PATTERN,
+)
 
 
 def extract_from_url(link: str) -> Tuple[int, int, str, str, int]:
@@ -37,16 +42,30 @@ def extract_from_url(link: str) -> Tuple[int, int, str, str, int]:
         (12345, 5, '2024-01-15', '2024-01-20', 2)
     """
 
-    # Extract ID, check-in, and check-out dates from URL
-    match = re.search(AIRBNB_URL_PATTERN, link)
+    # Extract room ID first
+    room_id_match = re.search(AIRBNB_ROOM_ID_PATTERN, link)
+    if not room_id_match:
+        raise ValueError("Invalid Airbnb URL format - room ID not found")
 
-    if not match:
-        raise ValueError("Invalid Airbnb URL format")
+    listing_id = int(room_id_match.group(1))
 
-    listing_id = int(match.group(1))
-    check_in_str: str = match.group(2)
-    check_out_str: str = match.group(3)
-    adults_count = int(match.group(4))
+    # Extract adults parameter
+    adults_match = re.search(AIRBNB_ADULTS_PATTERN, link)
+    adults_count = int(adults_match.group(1)) if adults_match else 1
+
+    # Extract check-in parameter
+    check_in_match = re.search(AIRBNB_CHECK_IN_PATTERN, link)
+    if not check_in_match:
+        raise ValueError("Invalid Airbnb URL format - check_in parameter not found")
+
+    check_in_str = check_in_match.group(1)
+
+    # Extract check-out parameter
+    check_out_match = re.search(AIRBNB_CHECK_OUT_PATTERN, link)
+    if not check_out_match:
+        raise ValueError("Invalid Airbnb URL format - check_out parameter not found")
+
+    check_out_str = check_out_match.group(1)
 
     # Parse dates
     try:

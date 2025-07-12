@@ -2,13 +2,12 @@
 Web scraping utilities for Airbnb listings.
 """
 
-import json
 import logging
 from typing import Any, Dict
 
 import pyairbnb  # type: ignore
 
-from .constants import DATABASE_PATH, DEBUG_JSON_OUTPUT, DEFAULT_CURRENCY
+from .constants import DATABASE_PATH, DEFAULT_CURRENCY
 from .data_processor import process_listing_data, validate_listing_data
 from .db_helpers import DatabaseManager
 from .url_utils import extract_from_url
@@ -17,7 +16,7 @@ logger = logging.getLogger(__name__)
 
 
 def scrape_listing_data(
-    link: str,
+    room_id: int,
     check_in_str: str,
     check_out_str: str,
     adults_count: int,
@@ -27,7 +26,7 @@ def scrape_listing_data(
     Scrape listing data from Airbnb using pyairbnb.
 
     Args:
-        link: Airbnb listing URL
+        room_id: Airbnb listing ID
         check_in_str: Check-in date string
         check_out_str: Check-out date string
         adults_count: Number of adults
@@ -39,11 +38,13 @@ def scrape_listing_data(
     Raises:
         Exception: If scraping fails
     """
-    logger.info(f"Scraping listing data for: {link}")
+    logger.info(
+        f"Scraping listing data for: {room_id}, check_in: {check_in_str}, check_out: {check_out_str}, adults: {adults_count}, currency: {currency}"
+    )
 
     try:
         data: Dict[str, Any] = pyairbnb.get_details(  # type: ignore
-            room_url=link,
+            room_id=room_id,
             currency=currency,
             check_in=check_in_str,
             check_out=check_out_str,
@@ -55,8 +56,8 @@ def scrape_listing_data(
         return data
 
     except Exception as e:
-        logger.error(f"Failed to scrape listing data from {link}: {e}")
-        raise Exception(f"Failed to scrape listing data: {e}")
+        logger.exception(f"Failed to scrape listing data from {room_id}: {e}")
+        return {}
 
 
 def add_listing(
@@ -87,14 +88,10 @@ def add_listing(
             extract_from_url(link)
         )
 
-        logger.info(
-            f"Extracted listing ID: {listing_id}, stay length: {stay_length} days"
-        )
-
         # Scrape listing data from Airbnb
         logger.info("Scraping listing data from Airbnb...")
         data = scrape_listing_data(
-            link, check_in_str, check_out_str, adults_count, currency
+            listing_id, check_in_str, check_out_str, adults_count, currency
         )
 
         # Process and structure the data
@@ -105,13 +102,15 @@ def add_listing(
         # Validate the processed data
         logger.info("Validating processed data...")
         if not validate_listing_data(processed_info):
-            logger.error("Data validation failed - processed listing data is invalid")
+            logger.exception(
+                "Data validation failed - processed listing data is invalid"
+            )
             raise ValueError("Processed listing data is invalid")
 
         logger.info("Data validation successful")
 
     except Exception as e:
-        logger.error(f"Failed during data extraction/processing phase: {e}")
+        logger.exception(f"Failed during data extraction/processing phase: {e}")
         raise
 
     # Save to database
@@ -131,7 +130,7 @@ def add_listing(
         logger.info(f"Listing {listing_id} successfully added to database")
 
     except Exception as e:
-        logger.error(f"Failed to save listing {listing_id} to database: {e}")
+        logger.exception(f"Failed to save listing {listing_id} to database: {e}")
         raise Exception(f"Failed to save listing to database: {e}")
 
 
@@ -178,5 +177,5 @@ def update_listing_costs(
             return True
 
     except Exception as e:
-        logger.error(f"Error updating listing {listing_id}: {e}")
+        logger.exception(f"Error updating listing {listing_id}: {e}")
         return False

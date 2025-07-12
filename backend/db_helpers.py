@@ -13,7 +13,7 @@ SCHEMA = {
         CREATE TABLE IF NOT EXISTS main (
             id INTEGER PRIMARY KEY,
             url TEXT,
-            json TEXT NOT NULL,
+            json TEXT NOT NULL
         )
     """
 }
@@ -58,7 +58,7 @@ class DatabaseManager:
                 logger.debug(f"Created new database connection to {self.database_path}")
 
             except sqlite3.Error as e:
-                logger.error(f"Failed to create database connection: {e}")
+                logger.exception(f"Failed to create database connection: {e}")
                 raise
 
         return self._connection
@@ -82,12 +82,12 @@ class DatabaseManager:
 
         except sqlite3.Error as e:
             conn.rollback()
-            logger.error(f"Database operation failed, rolled back: {e}")
+            logger.exception(f"Database operation failed, rolled back: {e}")
             raise
 
         except Exception as e:
             conn.rollback()
-            logger.error(f"Unexpected error, rolled back: {e}")
+            logger.exception(f"Unexpected error, rolled back: {e}")
             raise
 
         else:
@@ -115,7 +115,7 @@ class DatabaseManager:
         """Context manager exit."""
 
         if exc_type is not None:
-            logger.error(
+            logger.exception(
                 f"Exception occurred in DatabaseManager context: {exc_type.__name__}: {exc_val}"
             )
 
@@ -135,7 +135,7 @@ class DatabaseManager:
                 logger.info("Database tables created successfully")
 
         except sqlite3.Error as e:
-            logger.error(f"Error creating tables: {e}")
+            logger.exception(f"Error creating tables: {e}")
             raise
 
     def add_entry(self, listing_data: Dict[str, Any]) -> None:
@@ -169,11 +169,11 @@ class DatabaseManager:
                 logger.info(f"Successfully saved listing {listing_id} to database")
 
         except sqlite3.Error as e:
-            logger.error(f"Database error while adding entry {listing_id}: {e}")
+            logger.exception(f"Database error while adding entry {listing_id}: {e}")
             raise
 
         except Exception as e:
-            logger.error(f"Unexpected error while adding entry {listing_id}: {e}")
+            logger.exception(f"Unexpected error while adding entry {listing_id}: {e}")
             raise
 
     def get_listing(self, listing_id: int) -> Optional[Dict[str, Any]]:
@@ -199,11 +199,13 @@ class DatabaseManager:
                 return None
 
         except sqlite3.Error as e:
-            logger.error(f"Database error while retrieving listing {listing_id}: {e}")
+            logger.exception(
+                f"Database error while retrieving listing {listing_id}: {e}"
+            )
             raise
 
         except json.JSONDecodeError as e:
-            logger.error(f"JSON decode error for listing {listing_id}: {e}")
+            logger.exception(f"JSON decode error for listing {listing_id}: {e}")
             raise
 
     def get_all_listings(self) -> List[Dict[str, Any]]:
@@ -233,7 +235,7 @@ class DatabaseManager:
                 return listings
 
         except sqlite3.Error as e:
-            logger.error(f"Database error while retrieving all listings: {e}")
+            logger.exception(f"Database error while retrieving all listings: {e}")
             raise
 
     def get_listing_count(self) -> int:
@@ -252,7 +254,7 @@ class DatabaseManager:
                 return result[0] if result else 0
 
         except sqlite3.Error as e:
-            logger.error(f"Database error while getting listing count: {e}")
+            logger.exception(f"Database error while getting listing count: {e}")
             raise
 
     def delete_listing(self, listing_id: int) -> bool:
@@ -280,7 +282,7 @@ class DatabaseManager:
                 return deleted
 
         except sqlite3.Error as e:
-            logger.error(f"Database error while deleting listing {listing_id}: {e}")
+            logger.exception(f"Database error while deleting listing {listing_id}: {e}")
             raise
 
     def listing_exists(self, listing_id: int) -> bool:
@@ -300,5 +302,5 @@ class DatabaseManager:
                 return cursor.fetchone() is not None
 
         except sqlite3.Error as e:
-            logger.error(f"Database error while checking listing {listing_id}: {e}")
+            logger.exception(f"Database error while checking listing {listing_id}: {e}")
             raise

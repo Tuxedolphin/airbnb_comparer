@@ -37,7 +37,7 @@ def main():
             logger.info(f"Current listings in database: {count}")
 
     except Exception as e:
-        logger.error(f"Error initializing database: {e}")
+        logger.exception(f"Error initializing database: {e}")
 
 
 if __name__ == "__main__":

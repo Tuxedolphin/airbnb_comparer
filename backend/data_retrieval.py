@@ -39,7 +39,7 @@ def get_listing_by_id(
             return listing_data
 
     except Exception as e:
-        logger.error(f"Error retrieving listing {listing_id}: {e}")
+        logger.exception(f"Error retrieving listing {listing_id}: {e}")
         return None
 
 
@@ -70,7 +70,7 @@ def get_listings_by_location(
             return filtered_listings
 
     except Exception as e:
-        logger.error(f"Error searching by location: {e}")
+        logger.exception(f"Error searching by location: {e}")
         return []
 
 
@@ -97,7 +97,24 @@ def extract_field_from_listing(field_name: str, listing: Dict[str, Any]) -> Any:
     if field_key == "cost":
         return listing.get("cost", 0)
     elif field_key == "cover":
-        return listing["images"][0] if listing["images"] else ""
+        return listing["images"][0] if listing.get("images") else ""
+    elif field_key == "layout":
+        # Handle layout from property_details or sub_description
+        property_details = listing.get("property_details", {})
+        layout = property_details.get("layout", [])
+        if layout:
+            return [layout]  # Wrap in array for consistent UI handling
+        # Fallback to sub_description
+        sub_desc = listing.get("sub_description", {})
+        items = sub_desc.get("items", [])
+        return [items] if items else [[]]
+    elif field_key == "check_in_out":
+        # Handle both direct check_in_out and nested in house_rules
+        check_in_out = listing.get("check_in_out", [])
+        if not check_in_out:
+            house_rules = listing.get("house_rules", {})
+            check_in_out = house_rules.get("check_in_out", [])
+        return check_in_out
     else:
         return listing.get(field_key, "")
 
@@ -127,7 +144,7 @@ def get_all_listings(database_path: str = DATABASE_PATH) -> List[Dict[str, Any]]
             return db_manager.get_all_listings()
 
     except Exception as e:
-        logger.error(f"Error retrieving all listings: {e}")
+        logger.exception(f"Error retrieving all listings: {e}")
         return []
 
 
@@ -146,7 +163,7 @@ def get_listing_count(database_path: str = DATABASE_PATH) -> int:
             return db_manager.get_listing_count()
 
     except Exception as e:
-        logger.error(f"Error getting listing count: {e}")
+        logger.exception(f"Error getting listing count: {e}")
         return 0
 
 
@@ -166,7 +183,7 @@ def delete_listing(listing_id: int, database_path: str = DATABASE_PATH) -> bool:
             return db_manager.delete_listing(listing_id)
 
     except Exception as e:
-        logger.error(f"Error deleting listing {listing_id}: {e}")
+        logger.exception(f"Error deleting listing {listing_id}: {e}")
         return False
 
 
@@ -186,5 +203,5 @@ def listing_exists(listing_id: int, database_path: str = DATABASE_PATH) -> bool:
             return db_manager.listing_exists(listing_id)
 
     except Exception as e:
-        logger.error(f"Error checking listing {listing_id}: {e}")
+        logger.exception(f"Error checking listing {listing_id}: {e}")
         return False
