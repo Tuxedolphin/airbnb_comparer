@@ -1,0 +1,338 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Menu styles */
+.menu {
+  background-color: #fff;
+  padding: 2rem;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu h1 {
+  color: #ff5a5f;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.menu form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.menu input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 2rem;
+}
+
+/* Fieldset and column selector styles */
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 8px;
+  color: #333;
+}
+
+.input-group {
+  display: inline-block;
+  margin: 0.5rem 1rem 0.5rem 0;
+}
+
+.input-group input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.input-group label {
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Button styles */
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+button {
+  background-color: #ff5a5f;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e04347;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Table styles */
+.table-background {
+  flex: 1;
+  padding: 2rem;
+  background-color: #f5f5f5;
+}
+
+.table-container {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  vertical-align: top;
+}
+
+th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #333;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Cell-specific styles */
+.amenities,
+.reviews-summary,
+.house-rules,
+.property-details {
+  max-width: 300px;
+  max-height: 200px;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+.amenities ol,
+.amenities ul {
+  margin-left: 1rem;
+}
+
+.review-item {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.review-rating {
+  font-weight: bold;
+  color: #ff5a5f;
+}
+
+.review-comment {
+  margin: 0.5rem 0;
+  font-size: 13px;
+}
+
+.review-date {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Image styles */
+img {
+  max-width: 100px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Modal styles */
+.add-listing-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: none;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 90%;
+}
+
+.add-listing-modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.add-header {
+  color: #ff5a5f;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.add-listing {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.add-listing label {
+  font-weight: 600;
+  color: #333;
+}
+
+.add-listing input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.modal-buttons button {
+  min-width: 100px;
+}
+
+.modal-buttons button[type="button"] {
+  background-color: #6c757d;
+}
+
+.modal-buttons button[type="button"]:hover {
+  background-color: #5a6268;
+}
+
+/* Settings styles */
+.settings {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.settings h1 {
+  color: #ff5a5f;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.settings-section {
+  margin-bottom: 2rem;
+}
+
+.settings-section h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.settings-section h3 {
+  color: #666;
+  margin: 1.5rem 0 1rem 0;
+}
+
+/* Error and loading states */
+.error-banner {
+  background-color: #fee;
+  border: 1px solid #fcc;
+  border-radius: 4px;
+  padding: 12px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #c33;
+}
+
+.error-banner button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #c33;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 10px;
+}
+
+.loading-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  color: #666;
+  font-size: 18px;
+}
+
+.search-section {
+  margin-bottom: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .menu {
+    padding: 1rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .table-background {
+    padding: 1rem;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+
+  .input-group {
+    display: block;
+    margin: 0.5rem 0;
+  }
+}
