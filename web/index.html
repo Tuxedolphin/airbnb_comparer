@@ -1,124 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/style.css">
-        <script type="text/javascript" src="/eel.js"></script>
-        <script type="text/javascript" src="./logic.js" defer></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <title>Airbnb Comparer</title>
-    </head>
-    <body>
-        <div class="menu">
-            <h1>Airbnb Comparer</h1>
-            <form>
-                <input autocomplete="off" id="search-location" name="search-location" type="text" placeholder="Insert location">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript" src="./logic.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Airbnb Comparer</title>
+  </head>
+  <body>
+    <div class="menu">
+      <h1>Airbnb Comparer</h1>
+      <form>
+        <input
+          autocomplete="off"
+          id="search-location"
+          name="search-location"
+          type="text"
+          placeholder="Insert location"
+        />
 
-                <fieldset>
-                    <legend>Show:</legend>
-                    <div class="input-group">
-                        <input type="checkbox" name="id" id="id">
-                        <label for="id">ID</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="checkbox" name="rating" id="rating">
-                        <label for="rating">Rating</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="checkbox" name="url" id="url">
-                        <label for="url">URL</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="checkbox" name="duration" id="duration">
-                        <label for="duration">Duration</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="checkbox" name="location" id="location">
-                        <label for="location">Location</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="checkbox" name="getting-around" id="getting-around">
-                        <label for="getting-around">Getting Around</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="checkbox" name="check-in-out" id="check-in-out">
-                        <label for="check-in-out">Check In/ Out Times</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="checkbox" name="layout" id="layout">
-                        <label for="layout">Layout</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="checkbox" name="capacity" id="capacity">
-                        <label for="capacity">Capacity</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="checkbox" name="cost" id="cost">
-                        <label for="cost">Cost</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="checkbox" name="super-host" id="super-host">
-                        <label for="super-host">Super Host</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="checkbox" name="amenities" id="amenities">
-                        <label for="amenities">Amenities</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="checkbox" name="notes" id="notes">
-                        <label for="notes">Notes</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="checkbox" name="images" id="images">
-                        <label for="images">Images</label>
-                    </div>
-                </fieldset>
-            </form>
-            <div class="button-group">
-                <button id="menu-button" type="button">Submit</button>
-                <button id="add-button" type="button">Add Listing</button>
-                <button id="settings-button" type="button">Settings</button>
-            </div>
-        </div>
+        <fieldset>
+          <legend>Show:</legend>
+          <div class="input-group">
+            <input type="checkbox" name="id" id="id" />
+            <label for="id">ID</label>
+          </div>
+          <div class="input-group">
+            <input type="checkbox" name="rating" id="rating" />
+            <label for="rating">Rating</label>
+          </div>
+          <div class="input-group">
+            <input type="checkbox" name="url" id="url" />
+            <label for="url">URL</label>
+          </div>
+          <div class="input-group">
+            <input type="checkbox" name="duration" id="duration" />
+            <label for="duration">Duration</label>
+          </div>
+          <div class="input-group">
+            <input type="checkbox" name="location" id="location" />
+            <label for="location">Location</label>
+          </div>
+          <div class="input-group">
+            <input type="checkbox" name="getting-around" id="getting-around" />
+            <label for="getting-around">Getting Around</label>
+          </div>
+          <div class="input-group">
+            <input type="checkbox" name="check-in-out" id="check-in-out" />
+            <label for="check-in-out">Check In/ Out Times</label>
+          </div>
+          <div class="input-group">
+            <input type="checkbox" name="layout" id="layout" />
+            <label for="layout">Layout</label>
+          </div>
+          <div class="input-group">
+            <input type="checkbox" name="capacity" id="capacity" />
+            <label for="capacity">Capacity</label>
+          </div>
+          <div class="input-group">
+            <input type="checkbox" name="cost" id="cost" />
+            <label for="cost">Cost</label>
+          </div>
+          <div class="input-group">
+            <input type="checkbox" name="super-host" id="super-host" />
+            <label for="super-host">Super Host</label>
+          </div>
+          <div class="input-group">
+            <input type="checkbox" name="amenities" id="amenities" />
+            <label for="amenities">Amenities</label>
+          </div>
+          <div class="input-group">
+            <input type="checkbox" name="highlights" id="highlights" />
+            <label for="highlights">Highlights</label>
+          </div>
+          <div class="input-group">
+            <input
+              type="checkbox"
+              name="reviews-summary"
+              id="reviews-summary"
+            />
+            <label for="reviews-summary">Reviews Summary</label>
+          </div>
+          <div class="input-group">
+            <input type="checkbox" name="house-rules" id="house-rules" />
+            <label for="house-rules">House Rules</label>
+          </div>
+          <div class="input-group">
+            <input
+              type="checkbox"
+              name="property-details"
+              id="property-details"
+            />
+            <label for="property-details">Property Details</label>
+          </div>
+          <div class="input-group">
+            <input type="checkbox" name="notes" id="notes" />
+            <label for="notes">Notes</label>
+          </div>
+          <div class="input-group">
+            <input type="checkbox" name="images" id="images" />
+            <label for="images">Images</label>
+          </div>
+        </fieldset>
+      </form>
+      <div class="button-group">
+        <button id="menu-button" type="button">Submit</button>
+        <button id="add-button" type="button">Add Listing</button>
+        <button id="settings-button" type="button">Settings</button>
+      </div>
+    </div>
 
-        <div class="settings">
-            <h1>Settings</h1>
-            <form>
-                <p>Test</p>
-            </form>
-        </div>
+    <div class="settings">
+      <h1>Settings</h1>
+      <form>
+        <p>Test</p>
+      </form>
+    </div>
 
-        <div class="table-background">
-            <div class="table-container">
-                <table id="listing-table">
-                    <thead>
-                        <tr></tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-            </div>
-        </div>
+    <div class="table-background">
+      <div class="table-container">
+        <table id="listing-table">
+          <thead>
+            <tr></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
 
-        <dialog id="add-listing">
-            <h1 class="add-header">Add a Listing</h1>
-            <form class="add-listing" id="add-listing-form">
-                <label for="link">Link: </label>
-                <input id="link" type="url">
-                <label for="dailyPrice">Daily Price: </label>
-                <input id="dailyPrice" type="number">
-                <label for="MiscPrice">Misc Price: </label>
-                <input id="MiscPrice" type="number">
-            </form>
-            <div>
-                <button type="button" form="add-listing-form" formmethod="dialog" id="addButton">Add</button>
-                <button type="button" form="add-listing-form" formmethod="dialog" id="cancelButton">Cancel</button>
-            </div>
-        </dialog>
+    <dialog id="add-listing">
+      <h1 class="add-header">Add a Listing</h1>
+      <form class="add-listing" id="add-listing-form">
+        <label for="link">Link: </label>
+        <input id="link" type="url" />
+        <label for="dailyPrice">Daily Price: </label>
+        <input id="dailyPrice" type="number" />
+        <label for="MiscPrice">Misc Price: </label>
+        <input id="MiscPrice" type="number" />
+      </form>
+      <div>
+        <button
+          type="button"
+          form="add-listing-form"
+          formmethod="dialog"
+          id="addButton"
+        >
+          Add
+        </button>
+        <button
+          type="button"
+          form="add-listing-form"
+          formmethod="dialog"
+          id="cancelButton"
+        >
+          Cancel
+        </button>
+      </div>
+    </dialog>
 
-        <dialog id="show-images">
-            <h1 class="add-header">Images</h1>
-        </dialog>
-
-    </body>
+    <dialog id="show-images">
+      <h1 class="add-header">Images</h1>
+    </dialog>
+  </body>
 </html>
